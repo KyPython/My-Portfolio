@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: system-ui, sans-serif;
+    line-height: 1.6;
+    background: #fefefe;
+    color: #111;
+    padding: 20px;
+  }
+  header, section, footer {
+    max-width: 800px;
+    margin: 0 auto 50px;
+  }
+  h1, h2, h3, h4 {
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  p, li {
+    margin-bottom: 10px;
+  }
+  ul {
+    padding-left: 20px;
+  }
+  
+  .project {
+    margin-bottom: 40px;
+  }
+  .project img {
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 10px;
+  }
+  .stack-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  @media (min-width: 600px) {
+    .stack-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .gallery img {
+    width: 150px;
+    border-radius: 6px;
+  }
+  a {
+    color: #007acc;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666;
+  }
+  
+  .tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 2px 6px;
+    margin-left: 8px;
+    border-radius: 4px;
+    color: #fff;
+  }
+  
+  .tag.web {
+    background-color: #007acc;
+  }
+  
+  .tag.app {
+    background-color: #28a745;
+  }
+  
+  .tag.game {
+    background-color: #c0392b;
+  }
+  
