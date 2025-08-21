@@ -12,6 +12,16 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
+      <head>
+        <meta property="og:title" content="KyPython Portfolio" />
+        <meta property="og:description" content="Showcase of web, app, and game projects by KyJahn T Smith." />
+        <meta property="og:image" content="/public/file.svg" />
+        <meta property="og:url" content="https://kyjahn.dev" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="KyPython Portfolio" />
+        <meta name="twitter:description" content="Showcase of web, app, and game projects by KyJahn T Smith." />
+        <meta name="twitter:image" content="/public/file.svg" />
+      </head>
       <body className="antialiased font-sans">
         {children}
         <ClientModals />
