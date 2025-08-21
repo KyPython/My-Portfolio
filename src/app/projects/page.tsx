@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+// Removed unused imports
 
 const projects = [
   {
@@ -35,6 +36,7 @@ const projects = [
   },
 ];
 
+export default function ProjectsPage() {
   const [selected, setSelected] = useState("All");
   const [selectedTech, setSelectedTech] = useState<string | null>(null);
   const [viewed, setViewed] = useState<string[]>([]);
@@ -126,7 +128,6 @@ const projects = [
           </button>
         ))}
       </nav>
-      <AnimatePresence>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {filtered.map((project) => (
             <motion.div
