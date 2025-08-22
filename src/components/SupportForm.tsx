@@ -111,7 +111,7 @@ const SupportForm: React.FC = () => {
           </label>
           <Select
             value={formData.subject}
-            onChange={(value) => handleInputChange('subject', value)}
+            onChange={(e) => handleInputChange('subject', e.target.value)}
             disabled={isSubmitting}
             className="w-full px-4 py-3 border border-(--color-border) rounded-md focus:outline-none focus:ring-2 focus:ring-(--color-accent)"
           >
