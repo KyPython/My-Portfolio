@@ -1,0 +1,4 @@
+import * as React from "react";
+import type { SVGProps } from "react";
+const ArrowRightIcon = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6.692 11.617" {...props}><path xmlns="http://www.w3.org/2000/svg" fill="#000" stroke="#000" d="M.877.497c.101 0 .178.03.256.11l4.944 4.95c.054.05.08.09.091.12a.34.34 0 0 1 0 .25.34.34 0 0 1-.09.12l-4.97 4.97a.28.28 0 0 1-.225.1c-.094 0-.175-.04-.26-.12a.35.35 0 0 1-.11-.26c0-.1.031-.18.11-.25l4.68-4.69-4.707-4.7C.52 1.017.497.947.5.867a.38.38 0 0 1 .122-.26.33.33 0 0 1 .255-.11z" /></svg>;
+export default ArrowRightIcon;

@@ -1,14 +1,20 @@
 import Image from "next/image";
+import Link from "next/link";
 
-export default function IndiePuzzleGameStory() {
+export default function AlgoClinicStory() {
   return (
     <main className="max-w-2xl mx-auto py-10 px-4">
-      <h1 className="text-3xl font-bold mb-4">Indie Puzzle Game</h1>
+      <h1 className="text-3xl font-bold mb-4">AlgoClinic</h1>
+      <div className="mb-4">
+        <Link href="/projects" className="text-sm text-blue-600 underline">
+          ← Back to Projects
+        </Link>
+      </div>
       <Image
-        src="/project2.jpg"
-        alt="Indie Puzzle Game"
-        width={600}
-        height={240}
+        src="/images/algoclinic.svg"
+        alt="AlgoClinic Screenshot"
+        width={1200}
+        height={600}
         className="rounded mb-6"
       />
       <section className="mb-6">
