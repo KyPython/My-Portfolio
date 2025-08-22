@@ -1,3 +1,3 @@
 export default {
-  plugins: ["@tailwindcss/postcss"],
+  plugins: { "postcss-import": {}, "@tailwindcss/postcss": {} },
 };

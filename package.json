@@ -1,5 +1,5 @@
 {
-  "name": "3650060f1150933c3533aaffaa9d79e0657d2fe87e4aa2dcff820358f6485dd9",
+  "name": "363e94cc3feb9edbbf65c7bef9db80a78d7e6023a69498dab3a53d60af5d4b06",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,13 +13,13 @@
     "@kombai/react-error-boundary": "^1.1.0",
     "@tailwindcss/postcss": "^4.1.12",
     "date-fns": "^4.1.0",
+    "framer-motion": "^12.23.12",
     "next": "15.5.0",
     "postcss": "^8.5.6",
     "postcss-import": "^16.1.1",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "tailwindcss": "^4.1.12",
-    "framer-motion": "^12.23.12"
+    "tailwindcss": "^4.1.12"
   },
   "devDependencies": {
     "@types/node": "^20.19.11",
@@ -34,23 +34,23 @@
   "type": "module",
   "strictDependencies": {
     "@headlessui/react": "^2.2.7",
-    "@zohocrm/nodejs-sdk-2/": {
-      "0": "^6.1.0"
-    },
-    "framer-motion": "^12.23.12",
+    "@kombai/react-error-boundary": "^1.1.0",
+    "@tailwindcss/postcss": "^4.1.12",
+    "date-fns": "^4.1.0",
     "next": "15.5.0",
+    "postcss": "^8.5.6",
+    "postcss-import": "^16.1.1",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
+    "tailwindcss": "^4.1.12",
+    "framer-motion": "^12.23.12",
+    "@types/node": "^20.19.11",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "autoprefixer": "^10.4.21",
-    "eslint": "^9",
-    "eslint-config-next": "15.5.0",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.12",
-    "typescript": "^5"
+    "comment-json": "^4.2.5",
+    "env-cmd": "^10.1.0",
+    "ts-morph": "^26.0.0",
+    "typescript": "^5",
+    "webpack": "^5.101.3"
   }
 }

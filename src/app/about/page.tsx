@@ -1,35 +1,58 @@
 import Link from "next/link";
+import { Button } from '@headlessui/react';
 
 export default function About() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-white text-gray-900">
-      <h1 className="text-3xl font-bold mb-4">About Me</h1>
-      <p className="max-w-xl text-lg text-center mb-8">
-        Hi, I&apos;m KyPython! I build web, app, and game projects with a focus
-        on clean code, user-first design, and creative problem solving. My
-        journey started with curiosity and grew into a passion for impactful
-        software.
-      </p>
-      <ul className="mb-8 text-left max-w-lg">
-        <li>
-          <strong>Frontend:</strong> HTML, CSS, JS, React & React Native
-        </li>
-        <li>
-          <strong>Backend:</strong> Node.js, Supabase
-        </li>
-        <li>
-          <strong>Game Dev:</strong> Unity, C#, Godot
-        </li>
-        <li>
-          <strong>Tools:</strong> Git, Figma, Firebase, Jira, Postman
-        </li>
-      </ul>
-      <Link
-        href="/projects"
-        className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
-      >
-        See My Projects
-      </Link>
+    <main className="min-h-screen bg-(--color-background) py-20 px-4">
+      <div className="max-w-4xl mx-auto text-center">
+        <h1 className="heading-hero text-(--color-foreground) mb-8">About Me</h1>
+        
+        <div className="max-w-3xl mx-auto mb-12">
+          <p className="text-body-large text-(--color-foreground) leading-relaxed">
+            Hi, I&apos;m <strong>KyJahn Smith</strong>! I build web, app, and game projects with a focus 
+            on clean code, user-first design, and creative problem solving. My 
+            journey started with curiosity and grew into a passion for impactful 
+            software.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+          <div className="bg-(--color-muted) p-6 rounded-lg">
+            <h3 className="heading-card text-(--color-foreground) mb-4">Frontend</h3>
+            <p className="text-body text-(--color-muted-foreground)">
+              HTML, CSS, JS, React & React Native
+            </p>
+          </div>
+          
+          <div className="bg-(--color-muted) p-6 rounded-lg">
+            <h3 className="heading-card text-(--color-foreground) mb-4">Backend</h3>
+            <p className="text-body text-(--color-muted-foreground)">
+              Node.js, Supabase
+            </p>
+          </div>
+          
+          <div className="bg-(--color-muted) p-6 rounded-lg">
+            <h3 className="heading-card text-(--color-foreground) mb-4">Game Dev</h3>
+            <p className="text-body text-(--color-muted-foreground)">
+              Unity, C#, Godot
+            </p>
+          </div>
+          
+          <div className="bg-(--color-muted) p-6 rounded-lg">
+            <h3 className="heading-card text-(--color-foreground) mb-4">Tools</h3>
+            <p className="text-body text-(--color-muted-foreground)">
+              Git, Figma, Firebase, Jira, Postman
+            </p>
+          </div>
+        </div>
+
+        <Link
+          href="/projects"
+          className="inline-block px-8 py-4 bg-(--color-accent) text-white rounded-lg text-body font-semibold hover:bg-blue-700 transition-colors"
+        >
+          See My Projects
+        </Link>
+      </div>
     </main>
   );
 }

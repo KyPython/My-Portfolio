@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react';
-import LogoIcon from './icons/LogoIcon';
 import ChevronDownIcon from './icons/ChevronDownIcon';
 import Button from './ui/Button';
 
@@ -51,8 +50,8 @@ const Navigation: React.FC<NavigationProps> = ({ links }) => {
       isScrolled ? 'shadow-md' : ''
     }`}>
       <div className="flex items-center">
-        <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
-          <LogoIcon width={70} height={36} color="#000000" />
+        <Link href="/" className="text-xl font-bold text-(--color-foreground) hover:text-(--color-accent) transition-colors">
+          Ky Jahn Smith
         </Link>
       </div>
       
@@ -76,18 +75,6 @@ const Navigation: React.FC<NavigationProps> = ({ links }) => {
             </MenuButton>
             
             <MenuItems className="absolute top-full left-0 mt-2 bg-white border border-(--color-border) rounded-md shadow-lg py-2 min-w-[120px] z-10 focus:outline-none">
-              <MenuItem>
-                {({ focus }) => (
-                  <Link
-                    href="/blog"
-                    className={`block px-4 py-2 text-sm text-(--color-foreground) transition-colors ${
-                      focus ? 'bg-(--color-muted) text-(--color-accent)' : ''
-                    }`}
-                  >
-                    Blog
-                  </Link>
-                )}
-              </MenuItem>
               <MenuItem>
                 {({ focus }) => (
                   <Link

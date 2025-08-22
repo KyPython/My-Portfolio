@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { Input } from '@headlessui/react';
 import Button from './ui/Button';
-import LogoIcon from './icons/LogoIcon';
 
 const Footer: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -52,7 +51,7 @@ const Footer: React.FC = () => {
         { label: "Home Page", href: "/" },
         { label: "Projects List", href: "/projects" },
         { label: "About Me", href: "/about" },
-        { label: "Contact Us", href: "/contact" },
+        { label: "Contact Me", href: "/contact" },
         { label: "Blog Posts", href: "/blog" }
       ]
     },
@@ -69,21 +68,21 @@ const Footer: React.FC = () => {
     {
       title: "Connect",
       links: [
-        { label: "LinkedIn Profile", href: "https://linkedin.com/in/kypython" },
+        { label: "LinkedIn Profile", href: "https://www.linkedin.com/in/kyjahn-smith-16487224b/" },
         { label: "GitHub Repo", href: "https://github.com/KyPython" },
-        { label: "Twitter Feed", href: "https://twitter.com/kypython" },
-        { label: "Instagram Page", href: "https://instagram.com/kypython" },
-        { label: "YouTube Channel", href: "https://youtube.com/@kypython" }
+        { label: "Twitter Feed", href: "https://x.com/KyJahnSmith" },
+        { label: "Instagram Page", href: "https://www.instagram.com/k_tsmith/" },
+        { label: "YouTube Channel", href: "https://www.youtube.com/@kyjahnsmith3685" }
       ]
     },
     {
-      title: "Follow Us",
+      title: "Follow Me",
       links: [
-        { label: "Facebook Page", href: "https://facebook.com/kypython" },
-        { label: "Pinterest Board", href: "https://pinterest.com/kypython" },
-        { label: "Snapchat Story", href: "https://snapchat.com/add/kypython" },
-        { label: "TikTok Account", href: "https://tiktok.com/@kypython" },
-        { label: "Legal", href: "/legal" }
+        { label: "Facebook Page", href: "https://www.facebook.com/kyjahn.smith/" },
+        { label: "Legal", href: "/legal" },
+        { label: "User Agreement", href: "/user-agreement" },
+        { label: "Cookie Policy", href: "/cookies" },
+        { label: "Accessibility Info", href: "/accessibility" }
       ]
     },
     {
@@ -93,13 +92,12 @@ const Footer: React.FC = () => {
         { label: "Cookie Policy", href: "/cookies" },
         { label: "Accessibility Info", href: "/accessibility" },
         { label: "Contact Info", href: "/contact-info" },
-        { label: "Email Us", href: "mailto:ky@python.dev" }
+        { label: "Email Us", href: "mailto:kyjahntsmith@gmail.com" }
       ]
     },
     {
-      title: "Call Us",
+      title: "Contact",
       links: [
-        { label: "Office Location", href: "/location" },
         { label: "Feedback Form", href: "/feedback" },
         { label: "Help Center", href: "/help" },
         { label: "Report Issue", href: "/report" },
@@ -118,7 +116,7 @@ const Footer: React.FC = () => {
               Subscribe to updates
             </h3>
             <p className="text-body text-(--color-foreground)">
-              Stay informed about our latest projects and insights.
+              Stay informed about my latest projects and insights.
             </p>
           </div>
           
@@ -158,10 +156,10 @@ const Footer: React.FC = () => {
             
             <div className="flex gap-1 text-tiny">
               <span className="text-(--color-muted-foreground)">
-                We respect your privacy and will not share your info.
+                I respect your privacy and will not share your info.
               </span>
               <Link href="/privacy" className="text-(--color-foreground) underline">
-                We respect your privacy and will not share your info.
+                Privacy Policy
               </Link>
             </div>
           </div>
@@ -196,9 +194,11 @@ const Footer: React.FC = () => {
         <div className="flex flex-col gap-4">
           <hr className="border-t border-(--color-border)" />
           <div className="flex items-center justify-between">
-            <LogoIcon width={70} height={36} color="#000000" />
+            <div className="text-xl font-bold text-(--color-foreground)">
+              Ky Jahn Smith
+            </div>
             <p className="text-small text-(--color-foreground)">
-              © 2025 Relume. All rights reserved.
+              © 2025 Ky Jahn Smith. All rights reserved.
             </p>
           </div>
         </div>

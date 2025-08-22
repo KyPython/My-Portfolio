@@ -88,6 +88,28 @@ export const mockRootProps = {
       liveUrl: "https://stream-engine-silk.vercel.app",
       repoUrl: "https://github.com/KyPython/StreamEngine",
       featured: true
+    },
+    {
+      id: "reportengine",
+      title: "ReportEngine",
+      category: ProjectCategory.WEB_DEVELOPMENT as const,
+      description: "Automated reporting and dashboards for business analytics; exports, scheduling and insights.",
+      tech: ["Next.js", "Tailwind", "Vercel"],
+      image: "/images/report-engine.svg",
+      liveUrl: "https://reportengine.vercel.app/",
+      repoUrl: "https://github.com/KyPython/ReportEngine",
+      featured: false
+    },
+    {
+      id: "salesbase-frontend",
+      title: "SalesBase Frontend",
+      category: ProjectCategory.WEB_DEVELOPMENT as const,
+      description: "Modern CRM frontend with intuitive dashboards and realtime data integrations for enterprise sales teams.",
+      tech: ["React", "Tailwind CSS"],
+      image: "/images/salesbase-frontend.svg",
+      liveUrl: "https://salesbase-frontend.vercel.app",
+      repoUrl: "https://github.com/KyPython/SalesBase-Frontend",
+      featured: false
     }
   ],
   personalInfo: {

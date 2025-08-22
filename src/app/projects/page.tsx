@@ -46,10 +46,10 @@ export default function ProjectsPage() {
               className="bg-white rounded-lg shadow-md p-4 cursor-pointer border border-gray-200 hover:shadow-lg transition-all"
               onClick={() => setModalProject(project)}
             >
-              {project.live ? (
+              {project.liveUrl ? (
                 <div className="rounded mb-3 overflow-hidden h-40 bg-gray-100">
                   <iframe
-                    src={project.live}
+                    src={project.liveUrl}
                     title={project.title}
                     className="w-full h-full border-0"
                   />
@@ -65,13 +65,13 @@ export default function ProjectsPage() {
                     {project.category}
                   </span>
                   <span className="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full font-medium">
-                    {project.type}
+                    {project.featured ? 'Featured' : 'Project'}
                   </span>
                 </div>
                 <h3 className="text-lg font-bold text-gray-900">{project.title}</h3>
                 <p className="text-sm text-gray-600 line-clamp-2">{project.description}</p>
                 <div className="flex flex-wrap gap-1">
-                  {project.stack.slice(0, 3).map((tech) => (
+                  {project.tech?.slice(0, 3).map((tech) => (
                     <span
                       key={tech}
                       className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs font-medium"
@@ -79,16 +79,16 @@ export default function ProjectsPage() {
                       {tech}
                     </span>
                   ))}
-                  {project.stack.length > 3 && (
+                  {project.tech && project.tech.length > 3 && (
                     <span className="text-xs text-gray-500 px-2 py-1">
-                      +{project.stack.length - 3} more
+                      +{project.tech.length - 3} more
                     </span>
                   )}
                 </div>
                 <div className="flex gap-3 pt-2">
-                  {project.live && (
+                  {project.liveUrl && (
                     <Link
-                      href={project.live}
+                      href={project.liveUrl}
                       target="_blank"
                       className="text-blue-600 hover:text-blue-800 text-sm font-medium"
                       onClick={(e) => e.stopPropagation()}
@@ -96,9 +96,9 @@ export default function ProjectsPage() {
                       Live Demo
                     </Link>
                   )}
-                  {project.repo && (
+                  {project.repoUrl && (
                     <Link
-                      href={project.repo}
+                      href={project.repoUrl}
                       target="_blank"
                       className="text-gray-600 hover:text-gray-800 text-sm font-medium"
                       onClick={(e) => e.stopPropagation()}
@@ -107,9 +107,6 @@ export default function ProjectsPage() {
                     </Link>
                   )}
                 </div>
-                <p className="text-xs text-green-700 font-medium bg-green-50 p-2 rounded">
-                  {project.result}
-                </p>
               </div>
             </motion.div>
           ))}
@@ -142,10 +139,10 @@ export default function ProjectsPage() {
                 className="bg-white rounded-lg shadow-md p-4 cursor-pointer border border-gray-200 hover:shadow-lg transition-all"
                 onClick={() => setModalProject(project)}
               >
-                {project.live ? (
+                {project.liveUrl ? (
                   <div className="rounded mb-3 overflow-hidden h-40 bg-gray-100">
                     <iframe
-                      src={project.live}
+                      src={project.liveUrl}
                       title={project.title}
                       className="w-full h-full border-0"
                     />
@@ -161,13 +158,13 @@ export default function ProjectsPage() {
                       {project.category}
                     </span>
                     <span className="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full font-medium">
-                      {project.type}
+                      {project.featured ? 'Featured' : 'Project'}
                     </span>
                   </div>
                   <h3 className="text-lg font-bold text-gray-900">{project.title}</h3>
                   <p className="text-sm text-gray-600 line-clamp-2">{project.description}</p>
                   <div className="flex flex-wrap gap-1">
-                    {project.stack.slice(0, 3).map((tech) => (
+                    {project.tech?.slice(0, 3).map((tech) => (
                       <span
                         key={tech}
                         className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs font-medium"
@@ -175,16 +172,16 @@ export default function ProjectsPage() {
                         {tech}
                       </span>
                     ))}
-                    {project.stack.length > 3 && (
+                    {project.tech && project.tech.length > 3 && (
                       <span className="text-xs text-gray-500 px-2 py-1">
-                        +{project.stack.length - 3} more
+                        +{project.tech.length - 3} more
                       </span>
                     )}
                   </div>
                   <div className="flex gap-3 pt-2">
-                    {project.live && (
+                    {project.liveUrl && (
                       <Link
-                        href={project.live}
+                        href={project.liveUrl}
                         target="_blank"
                         className="text-blue-600 hover:text-blue-800 text-sm font-medium"
                         onClick={(e) => e.stopPropagation()}
@@ -192,9 +189,9 @@ export default function ProjectsPage() {
                         Live Demo
                       </Link>
                     )}
-                    {project.repo && (
+                    {project.repoUrl && (
                       <Link
-                        href={project.repo}
+                        href={project.repoUrl}
                         target="_blank"
                         className="text-gray-600 hover:text-gray-800 text-sm font-medium"
                         onClick={(e) => e.stopPropagation()}
@@ -203,9 +200,6 @@ export default function ProjectsPage() {
                       </Link>
                     )}
                   </div>
-                  <p className="text-xs text-green-700 font-medium bg-green-50 p-2 rounded">
-                    {project.result}
-                  </p>
                 </div>
               </motion.div>
             ))}
