@@ -3,6 +3,7 @@
 import React from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
+import SupportForm from '../../components/SupportForm';
 
 const SupportPage: React.FC = () => {
   const navigationLinks = [
@@ -132,57 +133,7 @@ const SupportPage: React.FC = () => {
               <h3 className="heading-card text-(--color-foreground) mb-6 text-center">
                 Quick Support Request
               </h3>
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-body font-medium text-(--color-foreground) mb-2">
-                      Name
-                    </label>
-                    <input 
-                      type="text" 
-                      className="w-full px-4 py-3 border border-(--color-border) rounded-md focus:outline-none focus:ring-2 focus:ring-(--color-accent)"
-                      placeholder="Your name"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-body font-medium text-(--color-foreground) mb-2">
-                      Email
-                    </label>
-                    <input 
-                      type="email" 
-                      className="w-full px-4 py-3 border border-(--color-border) rounded-md focus:outline-none focus:ring-2 focus:ring-(--color-accent)"
-                      placeholder="your@email.com"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-body font-medium text-(--color-foreground) mb-2">
-                    Subject
-                  </label>
-                  <select className="w-full px-4 py-3 border border-(--color-border) rounded-md focus:outline-none focus:ring-2 focus:ring-(--color-accent)">
-                    <option>General Inquiry</option>
-                    <option>Technical Issue</option>
-                    <option>Project Consultation</option>
-                    <option>Billing Question</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-body font-medium text-(--color-foreground) mb-2">
-                    Message
-                  </label>
-                  <textarea 
-                    rows={5}
-                    className="w-full px-4 py-3 border border-(--color-border) rounded-md focus:outline-none focus:ring-2 focus:ring-(--color-accent)"
-                    placeholder="Describe your issue or question..."
-                  ></textarea>
-                </div>
-                <button 
-                  type="submit"
-                  className="w-full px-6 py-3 bg-(--color-primary) text-(--color-primary-foreground) rounded-md hover:bg-gray-800 transition-colors"
-                >
-                  Send Support Request
-                </button>
-              </form>
+              <SupportForm />
             </div>
           </div>
         </div>

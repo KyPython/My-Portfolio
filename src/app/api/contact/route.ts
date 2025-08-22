@@ -7,6 +7,7 @@ interface ZohoContact {
   First_Name?: string;
   Last_Name?: string;
   Description?: string;
+  Phone?: string;
 }
 
 async function getZohoAccessToken(): Promise<string> {
@@ -53,11 +54,11 @@ async function createZohoLead(contactData: ZohoContact, accessToken: string) {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { email, name, company, message, source = 'Website Newsletter' } = body;
+    const { email, name, company, message, phone, subject = 'Website Contact Form' } = body;
 
-    if (!email) {
+    if (!email || !name || !message) {
       return NextResponse.json(
-        { error: 'Email is required' },
+        { error: 'Email, name, and message are required' },
         { status: 400 }
       );
     }
@@ -65,19 +66,20 @@ export async function POST(request: NextRequest) {
     // Get fresh access token
     const accessToken = await getZohoAccessToken();
 
-    // Parse name if provided
-    const nameParts = name ? name.split(' ') : ['', ''];
+    // Parse name
+    const nameParts = name.split(' ');
     const firstName = nameParts[0] || '';
     const lastName = nameParts.slice(1).join(' ') || '';
 
     // Prepare contact data for Zoho
     const contactData: ZohoContact = {
       Email: email,
-      Lead_Source: `Portfolio Website - ${source}`,
-      First_Name: firstName || 'Newsletter',
-      Last_Name: lastName || 'Subscriber',
-      Company: company || 'Unknown',
-      Description: message || `🌐 PORTFOLIO WEBSITE LEAD\n\nNewsletter subscription from kyjahnsmith.com\nSource: ${source}\nSubscribed: ${new Date().toLocaleString()}`,
+      Lead_Source: 'Portfolio Website - Contact Form',
+      First_Name: firstName,
+      Last_Name: lastName,
+      Company: company || 'Not Provided',
+      Phone: phone || '',
+      Description: `🌐 PORTFOLIO WEBSITE LEAD\n\nSubject: ${subject}\n\nMessage: ${message}\n\nSource: kyjahnsmith.com contact form\nSubmitted: ${new Date().toLocaleString()}`,
     };
 
     // Create lead in Zoho CRM
@@ -96,7 +98,9 @@ export async function POST(request: NextRequest) {
             name,
             company,
             message,
-            source,
+            phone,
+            subject,
+            source: 'Portfolio Website - Contact Form',
             timestamp: new Date().toISOString(),
           }),
         });
@@ -108,15 +112,15 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      message: 'Successfully subscribed and added to CRM',
+      message: 'Message sent successfully and added to CRM',
       zohoResult: result,
     });
 
   } catch (error) {
-    console.error('Newsletter subscription error:', error);
+    console.error('Contact form submission error:', error);
     return NextResponse.json(
       { 
-        error: 'Failed to process subscription',
+        error: 'Failed to send message',
         details: error instanceof Error ? error.message : 'Unknown error'
       },
       { status: 500 }

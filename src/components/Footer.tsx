@@ -17,15 +17,31 @@ const Footer: React.FC = () => {
     setStatus('idle');
     
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      setStatus('success');
-      setEmail('');
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email.trim(),
+          source: 'Newsletter Signup',
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setStatus('success');
+        setEmail('');
+      } else {
+        console.error('Newsletter subscription failed:', data);
+        setStatus('error');
+      }
       
       // Clear status after 3 seconds
       setTimeout(() => setStatus('idle'), 3000);
     } catch (error) {
+      console.error('Newsletter submission error:', error);
       setStatus('error');
       setTimeout(() => setStatus('idle'), 3000);
     } finally {
@@ -143,14 +159,42 @@ const Footer: React.FC = () => {
             </form>
             
             {status === 'success' && (
-              <div className="text-sm text-green-600">
-                ✓ Successfully subscribed!
+              <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                    <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-medium text-green-800 mb-1">
+                      Welcome to my newsletter! 🎉
+                    </h4>
+                    <p className="text-sm text-green-700">
+                      You're all set! I'll keep you updated with my latest projects, insights, and web development tips. Thanks for joining the community!
+                    </p>
+                  </div>
+                </div>
               </div>
             )}
             
             {status === 'error' && (
-              <div className="text-sm text-red-600">
-                ✗ Something went wrong. Please try again.
+              <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 bg-red-100 rounded-full flex items-center justify-center">
+                    <svg className="w-4 h-4 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-medium text-red-800 mb-1">
+                      Oops! Something went wrong
+                    </h4>
+                    <p className="text-sm text-red-700">
+                      I couldn't process your subscription right now. Please check your email and try again, or reach out to me directly.
+                    </p>
+                  </div>
+                </div>
               </div>
             )}
             
