@@ -6,7 +6,6 @@ const NewsletterSection: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [message, setMessage] = useState('');
 
   const validateEmail = (email: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -18,40 +17,43 @@ const NewsletterSection: React.FC = () => {
     
     if (!validateEmail(email)) {
       setStatus('error');
-      setMessage('Please enter a valid email address.');
+      setTimeout(() => setStatus('idle'), 5000);
       return;
     }
 
     setIsSubmitting(true);
     setStatus('idle');
-    setMessage('');
     
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      // Simulate success/error randomly for demo
-      const success = Math.random() > 0.2; // 80% success rate
-      
-      if (success) {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email.trim(),
+          source: 'Main Newsletter Section',
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
         setStatus('success');
-        setMessage('Thank you for subscribing! Check your email for confirmation.');
         setEmail('');
       } else {
+        console.error('Newsletter subscription failed:', data);
         setStatus('error');
-        setMessage('Something went wrong. Please try again later.');
       }
-    } catch (error) {
-      setStatus('error');
-      setMessage('Network error. Please check your connection and try again.');
-    } finally {
-      setIsSubmitting(false);
       
       // Clear status after 5 seconds
-      setTimeout(() => {
-        setStatus('idle');
-        setMessage('');
-      }, 5000);
+      setTimeout(() => setStatus('idle'), 5000);
+    } catch (error) {
+      console.error('Newsletter submission error:', error);
+      setStatus('error');
+      setTimeout(() => setStatus('idle'), 5000);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -60,14 +62,14 @@ const NewsletterSection: React.FC = () => {
       <div className="flex flex-col gap-8 max-w-4xl mx-auto text-center">
         <div className="flex flex-col gap-6">
           <h2 className="heading-subsection text-(--color-foreground)">
-            Stay Updated with Our Newsletter
+            Stay Updated with My Newsletter
           </h2>
           <p className="text-body-large text-(--color-foreground)">
-            Join our community and receive the latest updates, tips, and exclusive offers directly to your inbox.
+            Join my community and receive the latest updates, tips, and exclusive insights directly to your inbox.
           </p>
         </div>
         
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-4">
           <form onSubmit={handleSubmit} className="flex gap-4 max-w-md mx-auto">
             <Input
               type="email"
@@ -92,20 +94,48 @@ const NewsletterSection: React.FC = () => {
             </Button>
           </form>
           
-          {message && (
-            <div className={`text-sm p-3 rounded-md ${
-              status === 'success' 
-                ? 'bg-green-50 text-green-700 border border-green-200' 
-                : status === 'error'
-                ? 'bg-red-50 text-red-700 border border-red-200'
-                : ''
-            }`}>
-              {message}
+          {status === 'success' && (
+            <div className="p-4 bg-green-50 border border-green-200 rounded-lg max-w-md mx-auto">
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                  <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="text-sm font-medium text-green-800 mb-1">
+                    Welcome to my newsletter! 🎉
+                  </h4>
+                  <p className="text-sm text-green-700">
+                    You're all set! I'll keep you updated with my latest projects, insights, and web development tips.
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+          
+          {status === 'error' && (
+            <div className="p-4 bg-red-50 border border-red-200 rounded-lg max-w-md mx-auto">
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 w-6 h-6 bg-red-100 rounded-full flex items-center justify-center">
+                  <svg className="w-4 h-4 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="text-sm font-medium text-red-800 mb-1">
+                    Oops! Something went wrong
+                  </h4>
+                  <p className="text-sm text-red-700">
+                    Please check your email and try again, or reach out to me directly.
+                  </p>
+                </div>
+              </div>
             </div>
           )}
           
           <p className="text-tiny text-(--color-muted-foreground)">
-            By clicking Sign Up, you agree to our{' '}
+            By clicking Sign Up, you agree to my{' '}
             <a href="/terms" className="text-(--color-accent) hover:underline">
               Terms and Conditions
             </a>.
