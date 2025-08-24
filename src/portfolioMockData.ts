@@ -45,6 +45,17 @@ export const mockRootProps = {
       repoUrl: "https://github.com/KyPython/FormFlow",
       featured: true
     },
+      {
+        id: "post-code-scraper",
+        title: "Post Code Scraper",
+        category: ProjectCategory.WEB_DEVELOPMENT as const,
+    description: `This web application showcases my ability to build efficient and scalable solutions for data scraping and storage. The app scrapes postal codes from every state in the USA, and securely stores them in a Supabase database. It demonstrates my expertise in web scraping, database integration, and deploying production-ready applications.\n\nKey Features:\n- Automated Data Scraping: Efficiently extracts postal codes from targeted sources.\n- Secure Data Storage: Uses Supabase for reliable and scalable database management.\n- Cloud Deployment: Fully deployed on Render.com for seamless accessibility.\n\nWhy This Matters:\n- Build robust backend systems for data collection and storage.\n- Work with modern tools like Playwright, Supabase, and Render.\n- Deliver solutions that are ready for deployment in real-world scenarios.\n\nHow It Works:\n- Python: Core programming language for the scraper.\n- Playwright: For fast and reliable web scraping.\n- Supabase: A scalable backend-as-a-service for data storage.\n- Render: For cloud deployment and hosting.`,
+    tech: ["Python", "Playwright", "Supabase", "Render", "Next.js", "TypeScript", "Tailwind CSS"],
+        image: "/images/project-placeholder.png",
+    liveUrl: "https://post-code-scraper.onrender.com",
+  repoUrl: "https://github.com/KyPython/Post-Code-Scraper-New",
+  featured: true,
+  },
     {
       id: "algoclinic",
       title: "AlgoClinic",
@@ -110,7 +121,18 @@ export const mockRootProps = {
       liveUrl: "https://salesbase-frontend.vercel.app",
       repoUrl: "https://github.com/KyPython/SalesBase-Frontend",
       featured: false
-    }
+    },
+  {
+    id: "altlens",
+    title: "AltLens",
+    category: ProjectCategory.APP_DEVELOPMENT as const,
+    description: `AltLens is a React Native project created with Expo.\n\nGetting Started:\nTo run the project, use one of the following commands:\n- npm run android   # Run on Android emulator/device\n- npm run ios       # Run on iOS simulator/device\n- npm run web       # Run in the browser\n\nProject Structure:\n- App.js or App.tsx: Main entry point for the app\n- assets/: Images, fonts, and other static assets\n- components/: Reusable React Native components\n- screens/: App screens (if you add them)\n\nFirebase Integration Example:\nimport { auth, db } from '../lib/firebase';\n// Example: Sign up a user\n// import { createUserWithEmailAndPassword } from 'firebase/auth';\n// await createUserWithEmailAndPassword(auth, email, password);\n// Example: Add data to Firestore\n// import { collection, addDoc } from 'firebase/firestore';\n// await addDoc(collection(db, 'users'), { name: 'Jane Doe' });\n\nLearn More:\n- Expo Documentation: https://docs.expo.dev/\n- React Native Documentation: https://reactnative.dev/`,
+    tech: ["React Native", "Expo", "Firebase", "JavaScript", "TypeScript"],
+    image: "/images/project-placeholder.png",
+    liveUrl: "https://alt-lens-app-new.vercel.app",
+    repoUrl: "https://github.com/KyPython/Alt-Lens-App-New",
+    featured: true,
+  },
   ],
   personalInfo: {
     name: "KyPython",
