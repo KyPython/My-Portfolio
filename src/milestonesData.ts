@@ -126,6 +126,15 @@ export const milestones: Milestone[] = [
     technologies: ['TypeScript', 'Node.js', 'CLI', 'DSL', 'Compiler', 'Lexer', 'Parser', 'AST'],
     link: 'https://github.com/KyPython/log-filter-dsl'
   },
+  {
+    id: 'estimate-tracker',
+    date: '2025-12-05',
+    title: 'Estimate Tracker',
+    type: 'project',
+    description: 'Built a full-stack application for tracking time estimates vs actual time spent, inspired by Estimating from The Pragmatic Programmer.',
+    technologies: ['React', 'TypeScript', 'Node.js', 'Express', 'SQLite', 'Vite', 'Full Stack'],
+    link: 'https://estimate-tracker-1nke5ujsq-kypythons-projects.vercel.app/'
+  },
   
   // Kaggle Certifications & Courses
   {

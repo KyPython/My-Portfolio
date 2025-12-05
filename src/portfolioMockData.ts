@@ -288,6 +288,17 @@ export const mockRootProps = {
       repoUrl: "https://github.com/KyPython/log-filter-dsl",
       featured: true
     },
+    {
+      id: "estimate-tracker",
+      title: "Estimate Tracker",
+      category: ProjectCategory.FULL_STACK as const,
+      description: "A full-stack web application for tracking time estimates versus actual time spent on tasks, helping developers improve their estimation accuracy over time. Inspired by the 'Estimating' chapter from The Pragmatic Programmer, which emphasizes learning from past estimates to improve future accuracy. Features task creation with estimated completion time, logging actual time spent, per-task statistics showing estimation accuracy, and aggregate statistics including average estimation error. Built with React and TypeScript frontend, Node.js and Express backend with SQLite database. Enables developers to identify patterns in estimation accuracy, learn which types of tasks they consistently over- or under-estimate, and improve future estimates based on historical data.",
+      tech: ["React", "TypeScript", "Vite", "Node.js", "Express", "SQLite", "Full Stack", "Estimation"],
+      image: "/images/estimate-tracker.png",
+      liveUrl: "https://estimate-tracker-1nke5ujsq-kypythons-projects.vercel.app/",
+      repoUrl: "https://github.com/KyPython/estimate-tracker",
+      featured: true
+    },
   ],
   personalInfo: {
     name: "Ky Jahn Smith",
