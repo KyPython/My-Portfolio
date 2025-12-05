@@ -255,6 +255,17 @@ export const mockRootProps = {
       repoUrl: "https://github.com/KyPython/orthogonal-editor",
       featured: true
     },
+    {
+      id: "reversible-flags",
+      title: "Reversible Flags",
+      category: ProjectCategory.FULL_STACK as const,
+      description: "A demo application demonstrating reversible feature flags for safe rollouts and rollbacks. Showcases the concept of reversibility from The Pragmatic Programmer—the ability to easily undo changes when something goes wrong. Features flag management UI, real-time flag toggling, and flag-dependent API responses. Built with React and TypeScript frontend, Node.js and Express backend, enabling instant rollback without code deployment.",
+      tech: ["React", "TypeScript", "Node.js", "Express", "Vite", "Feature Flags", "Full Stack"],
+      image: "/images/reversible-flags.png",
+      liveUrl: "https://reversible-flags.vercel.app/",
+      repoUrl: "https://github.com/KyPython/reversible-flags",
+      featured: true
+    },
   ],
   personalInfo: {
     name: "Ky Jahn Smith",
