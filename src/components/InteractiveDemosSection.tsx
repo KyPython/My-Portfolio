@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
 import Button from './ui/Button';
@@ -18,7 +20,7 @@ const InteractiveDemosSection: React.FC = () => {
   };
 
   return (
-    <section className="px-16 py-20 bg-white" data-section="demos">
+    <section className="px-16 py-20 bg-(--color-background)" data-section="demos">
       <div className="flex items-center gap-20">
         <div className="flex-1 flex flex-col gap-8">
           <div className="flex flex-col gap-6">

@@ -2,8 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
 
 interface SitemapSection {
   title: string;
@@ -11,12 +9,6 @@ interface SitemapSection {
 }
 
 const SitemapPage: React.FC = () => {
-  const navigationLinks = [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Projects", href: "/projects" },
-    { label: "Contact", href: "/contact" }
-  ];
 
   const sitemapSections: SitemapSection[] = [
     {
@@ -41,7 +33,7 @@ const SitemapPage: React.FC = () => {
     {
       title: "Legal & Policies",
       links: [
-        { label: "Privacy Policy", href: "/privacy", description: "How we handle your personal information" },
+        { label: "Privacy Policy", href: "/privacy", description: "How I handle your personal information" },
         { label: "Terms of Service", href: "/terms", description: "Terms and conditions of use" },
         { label: "Legal Information", href: "/legal", description: "Legal notices and disclaimers" },
         { label: "Cookie Policy", href: "/cookies", description: "Information about cookie usage" },
@@ -62,8 +54,6 @@ const SitemapPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-(--color-background)">
-      <Navigation links={navigationLinks} />
-      
       {/* Hero Section */}
       <section className="relative px-16 py-24 bg-gradient-to-br from-teal-50 to-blue-50">
         <div className="relative max-w-4xl mx-auto text-center">
@@ -201,14 +191,14 @@ const SitemapPage: React.FC = () => {
               Can't Find What You're Looking For?
             </h3>
             <p className="text-body text-(--color-muted-foreground) mb-6 max-w-2xl mx-auto">
-              If you can't find the page you're looking for, try using the search function or contact us directly.
+              If you can't find the page you're looking for, try using the search function or contact me directly.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact" 
                 className="inline-flex items-center justify-center px-6 py-3 bg-(--color-primary) text-(--color-primary-foreground) rounded-md hover:bg-gray-800 transition-colors"
               >
-                Contact Us
+                Contact Me
               </Link>
               <Link 
                 href="/support" 
@@ -221,8 +211,6 @@ const SitemapPage: React.FC = () => {
 
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react';
 import { Input } from '@headlessui/react';
 import Button from './ui/Button';
@@ -58,7 +60,7 @@ const NewsletterSection: React.FC = () => {
   };
 
   return (
-    <section className="px-16 py-20 bg-white" data-section="newsletter">
+    <section className="px-16 py-20 bg-(--color-background)" data-section="newsletter">
       <div className="flex flex-col gap-8 max-w-4xl mx-auto text-center">
         <div className="flex flex-col gap-6">
           <h2 className="heading-subsection text-(--color-foreground)">

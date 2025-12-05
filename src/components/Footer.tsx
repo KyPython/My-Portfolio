@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Input } from '@headlessui/react';
@@ -49,16 +51,6 @@ const Footer: React.FC = () => {
     }
   };
 
-  const handleLinkClick = (href: string) => {
-    if (href.startsWith('http')) {
-      window.open(href, '_blank', 'noopener,noreferrer');
-    } else if (href.startsWith('mailto:')) {
-      window.location.href = href;
-    } else {
-      // Internal navigation
-      window.location.href = href;
-    }
-  };
 
   const footerSections = [
     {
@@ -94,44 +86,41 @@ const Footer: React.FC = () => {
     {
       title: "Follow Me",
       links: [
-        { label: "Facebook Page", href: "https://www.facebook.com/kyjahn.smith/" },
-        { label: "Legal", href: "/legal" },
-        { label: "User Agreement", href: "/user-agreement" },
-        { label: "Cookie Policy", href: "/cookies" },
-        { label: "Accessibility Info", href: "/accessibility" }
+        { label: "Facebook Page", href: "https://www.facebook.com/kyjahn.smith/" }
       ]
     },
     {
-      title: "Copyright Notice",
+      title: "Legal",
       links: [
-        { label: "User Agreement", href: "/user-agreement" },
-        { label: "Cookie Policy", href: "/cookies" },
-        { label: "Accessibility Info", href: "/accessibility" },
-        { label: "Contact Info", href: "/contact-info" },
-        { label: "Email Us", href: "mailto:kyjahntsmith@gmail.com" }
+        { label: "User Agreement", href: "/terms" },
+        { label: "Cookie Policy", href: "/privacy" },
+        { label: "Accessibility Info", href: "/legal#accessibility" },
+        { label: "Copyright Notice", href: "/legal#copyright" }
       ]
     },
     {
-      title: "Contact",
+      title: "Contact Info",
       links: [
-        { label: "Feedback Form", href: "/feedback" },
-        { label: "Help Center", href: "/help" },
-        { label: "Report Issue", href: "/report" },
-        { label: "Privacy Notice", href: "/privacy-notice" }
+        { label: "Email Me", href: "mailto:kyjahntsmith@gmail.com" },
+        { label: "Contact", href: "/contact" },
+        { label: "Feedback Form", href: "/support" },
+        { label: "Help Center", href: "/support" },
+        { label: "Report Issue", href: "/support" },
+        { label: "Privacy Notice", href: "/privacy" }
       ]
     }
   ];
 
   return (
-    <footer className="px-16 py-20 bg-white">
+    <footer className="px-16 py-20 bg-(--color-background) border-t border-(--color-border)">
       <div className="flex flex-col gap-20">
         {/* Newsletter Section */}
         <div className="flex items-center justify-between">
           <div className="flex flex-col gap-4">
-            <h3 className="text-lg font-semibold text-(--color-foreground)">
+            <h3 className="heading-card text-(--color-foreground)">
               Subscribe to updates
             </h3>
-            <p className="text-body text-(--color-foreground)">
+            <p className="text-body text-(--color-muted-foreground)">
               Stay informed about my latest projects and insights.
             </p>
           </div>
@@ -144,8 +133,8 @@ const Footer: React.FC = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Your email here"
                 disabled={isSubmitting}
-                className={`px-4 py-2 border rounded-md text-body focus:outline-none focus:ring-2 focus:ring-(--color-accent) min-w-[280px] ${
-                  status === 'error' ? 'border-red-500' : 'border-(--color-border)'
+                className={`px-4 py-2 border rounded-md text-body bg-(--color-background) text-(--color-foreground) focus:outline-none focus:ring-2 focus:ring-(--color-accent) min-w-[280px] ${
+                  status === 'error' ? 'border-(--color-error)' : 'border-(--color-border)'
                 }`}
               />
               <Button 
@@ -159,18 +148,18 @@ const Footer: React.FC = () => {
             </form>
             
             {status === 'success' && (
-              <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
+              <div className="p-4 bg-(--color-success) bg-opacity-10 border border-(--color-success) border-opacity-30 rounded-lg">
                 <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
-                    <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                  <div className="flex-shrink-0 w-6 h-6 bg-(--color-success) bg-opacity-20 rounded-full flex items-center justify-center">
+                    <svg className="w-4 h-4 text-(--color-success)" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-sm font-medium text-green-800 mb-1">
+                    <h4 className="text-small font-medium text-(--color-success) mb-1">
                       Welcome to my newsletter! 🎉
                     </h4>
-                    <p className="text-sm text-green-700">
+                    <p className="text-small text-(--color-foreground)">
                       You're all set! I'll keep you updated with my latest projects, insights, and web development tips. Thanks for joining the community!
                     </p>
                   </div>
@@ -179,18 +168,18 @@ const Footer: React.FC = () => {
             )}
             
             {status === 'error' && (
-              <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+              <div className="p-4 bg-(--color-error) bg-opacity-10 border border-(--color-error) border-opacity-30 rounded-lg">
                 <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 bg-red-100 rounded-full flex items-center justify-center">
-                    <svg className="w-4 h-4 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                  <div className="flex-shrink-0 w-6 h-6 bg-(--color-error) bg-opacity-20 rounded-full flex items-center justify-center">
+                    <svg className="w-4 h-4 text-(--color-error)" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-sm font-medium text-red-800 mb-1">
+                    <h4 className="text-small font-medium text-(--color-error) mb-1">
                       Oops! Something went wrong
                     </h4>
-                    <p className="text-sm text-red-700">
+                    <p className="text-small text-(--color-foreground)">
                       I couldn't process your subscription right now. Please check your email and try again, or reach out to me directly.
                     </p>
                   </div>
@@ -202,7 +191,7 @@ const Footer: React.FC = () => {
               <span className="text-(--color-muted-foreground)">
                 I respect your privacy and will not share your info.
               </span>
-              <Link href="/privacy" className="text-(--color-foreground) underline">
+              <Link href="/privacy" className="text-(--color-accent) hover:text-(--color-primary) underline transition-colors">
                 Privacy Policy
               </Link>
             </div>
@@ -220,14 +209,16 @@ const Footer: React.FC = () => {
                 {section.title}
               </h4>
               <div className="flex flex-col gap-3">
-                {section.links.map((link) => (
-                  <button
-                    key={link.href}
-                    onClick={() => handleLinkClick(link.href)}
-                    className="text-small text-(--color-foreground) hover:text-(--color-accent) transition-colors text-left"
+                {section.links.map((link, index) => (
+                  <Link
+                    key={`${section.title}-${link.label}-${index}`}
+                    href={link.href}
+                    target={link.href.startsWith('http') || link.href.startsWith('mailto:') ? '_blank' : undefined}
+                    rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    className="text-body text-(--color-muted-foreground) hover:text-(--color-accent) transition-colors"
                   >
                     {link.label}
-                  </button>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -238,10 +229,10 @@ const Footer: React.FC = () => {
         <div className="flex flex-col gap-4">
           <hr className="border-t border-(--color-border)" />
           <div className="flex items-center justify-between">
-            <div className="text-xl font-bold text-(--color-foreground)">
+            <div className="heading-card text-(--color-foreground)">
               Ky Jahn Smith
             </div>
-            <p className="text-small text-(--color-foreground)">
+            <p className="text-body text-(--color-muted-foreground)">
               © 2025 Ky Jahn Smith. All rights reserved.
             </p>
           </div>

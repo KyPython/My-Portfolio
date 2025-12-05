@@ -1,21 +1,10 @@
 'use client';
 
 import React from 'react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
 
 const LegalPage: React.FC = () => {
-  const navigationLinks = [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Projects", href: "/projects" },
-    { label: "Contact", href: "/contact" }
-  ];
-
   return (
     <div className="min-h-screen bg-(--color-background)">
-      <Navigation links={navigationLinks} />
-      
       {/* Hero Section */}
       <section className="relative px-16 py-24 bg-gradient-to-br from-indigo-50 to-purple-50">
         <div className="relative max-w-4xl mx-auto text-center">
@@ -89,11 +78,11 @@ const LegalPage: React.FC = () => {
           <div className="bg-white rounded-lg shadow-sm border border-(--color-border) p-8 mb-8">
             <h2 className="heading-card text-(--color-foreground) mb-4">Third-Party Content</h2>
             <p className="text-body text-(--color-muted-foreground) mb-4">
-              This website may contain links to third-party websites and services. The inclusion of any link does not imply endorsement by us of the site or service.
+              This website may contain links to third-party websites and services. The inclusion of any link does not imply endorsement by me of the site or service.
             </p>
             <ul className="text-body text-(--color-muted-foreground) space-y-2 ml-6">
               <li>• External links are provided for convenience only</li>
-              <li>• We are not responsible for third-party content or services</li>
+              <li>• I am not responsible for third-party content or services</li>
               <li>• Third-party sites have their own terms and privacy policies</li>
               <li>• Images and assets are properly licensed or attributed</li>
             </ul>
@@ -118,9 +107,7 @@ const LegalPage: React.FC = () => {
               For legal inquiries, copyright concerns, or compliance questions:
             </p>
             <div className="text-body text-(--color-foreground) space-y-2">
-              <p><strong>Legal Department:</strong> legal@kyjahnsmith.com</p>
-              <p><strong>Copyright Agent:</strong> copyright@kyjahnsmith.com</p>
-              <p><strong>Business Address:</strong> [Your Business Address]</p>
+              <p><strong>Email:</strong> <a href="mailto:kyjahntsmith@gmail.com" className="text-(--color-accent) hover:underline">kyjahntsmith@gmail.com</a></p>
               <p><strong>Last Updated:</strong> January 2025</p>
             </div>
             <div className="mt-6 p-4 bg-white rounded border border-indigo-200">
@@ -134,7 +121,6 @@ const LegalPage: React.FC = () => {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 };

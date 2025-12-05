@@ -1,8 +1,11 @@
+"use client";
+
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react';
 import ChevronDownIcon from './icons/ChevronDownIcon';
 import Button from './ui/Button';
+import ThemeToggle from './ThemeToggle';
 
 interface NavigationLink {
   label: string;
@@ -46,7 +49,7 @@ const Navigation: React.FC<NavigationProps> = ({ links }) => {
   };
 
   return (
-    <nav className={`sticky top-0 z-50 flex items-center justify-between px-16 py-4 bg-white transition-shadow duration-200 ${
+    <nav className={`sticky top-0 z-50 flex items-center justify-between px-16 py-4 bg-(--color-background) border-b border-(--color-border) transition-shadow duration-200 ${
       isScrolled ? 'shadow-md' : ''
     }`}>
       <div className="flex items-center">
@@ -92,6 +95,7 @@ const Navigation: React.FC<NavigationProps> = ({ links }) => {
         </div>
         
         <div className="flex items-center gap-4">
+          <ThemeToggle />
           <Button variant="outline" size="md" onClick={handleSignUp}>
             Sign Up
           </Button>

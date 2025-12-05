@@ -1,8 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
 
 interface FAQItem {
   question: string;
@@ -11,13 +9,6 @@ interface FAQItem {
 
 const FAQPage: React.FC = () => {
   const [openItems, setOpenItems] = useState<number[]>([]);
-
-  const navigationLinks = [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Projects", href: "/projects" },
-    { label: "Contact", href: "/contact" }
-  ];
 
   const faqData: FAQItem[] = [
     {
@@ -64,8 +55,6 @@ const FAQPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-(--color-background)">
-      <Navigation links={navigationLinks} />
-      
       {/* Hero Section */}
       <section className="relative px-16 py-24 bg-gradient-to-br from-purple-50 to-blue-50">
         <div className="relative max-w-4xl mx-auto text-center">
@@ -134,7 +123,7 @@ const FAQPage: React.FC = () => {
                 Get in Touch
               </a>
               <a 
-                href="mailto:ky@python.dev" 
+                href="mailto:kyjahntsmith@gmail.com" 
                 className="inline-flex items-center justify-center px-6 py-3 border border-(--color-border) bg-white text-(--color-foreground) rounded-md hover:bg-(--color-muted) transition-colors"
               >
                 Email Me Directly
@@ -144,7 +133,6 @@ const FAQPage: React.FC = () => {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 };

@@ -1,20 +1,10 @@
 'use client';
 
 import React from 'react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
 
 const PrivacyPage: React.FC = () => {
-  const navigationLinks = [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Projects", href: "/projects" },
-    { label: "Contact", href: "/contact" }
-  ];
-
   return (
     <div className="min-h-screen bg-(--color-background)">
-      <Navigation links={navigationLinks} />
       
       {/* Hero Section */}
       <section className="relative px-16 py-24 bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -29,7 +19,7 @@ const PrivacyPage: React.FC = () => {
             Privacy Policy
           </h1>
           <p className="text-body-large text-(--color-muted-foreground) max-w-2xl mx-auto">
-            Your privacy is important to us. This policy explains how we collect, use, and protect your personal information.
+            Your privacy is important to me. This policy explains how I collect, use, and protect your personal information.
           </p>
         </div>
       </section>
@@ -40,10 +30,9 @@ const PrivacyPage: React.FC = () => {
           <div className="prose prose-lg max-w-none">
             
             <div className="bg-white rounded-lg shadow-sm border border-(--color-border) p-8 mb-8">
-              <h2 className="heading-card text-(--color-foreground) mb-4">Information We Collect</h2>
+              <h2 className="heading-card text-(--color-foreground) mb-4">Information I Collect</h2>
               <p className="text-body text-(--color-muted-foreground) mb-4">
-                We collect information you provide directly to us, such as when you create an account, 
-                subscribe to our newsletter, or contact us for support.
+                I collect information you provide directly to me, such as when you subscribe to my newsletter, or contact me for support.
               </p>
               <ul className="text-body text-(--color-muted-foreground) space-y-2 ml-6">
                 <li>• Personal information (name, email address, phone number)</li>
@@ -54,14 +43,14 @@ const PrivacyPage: React.FC = () => {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm border border-(--color-border) p-8 mb-8">
-              <h2 className="heading-card text-(--color-foreground) mb-4">How We Use Your Information</h2>
+              <h2 className="heading-card text-(--color-foreground) mb-4">How I Use Your Information</h2>
               <p className="text-body text-(--color-muted-foreground) mb-4">
-                We use the information we collect to provide, maintain, and improve our services:
+                I use the information I collect to provide, maintain, and improve my services:
               </p>
               <ul className="text-body text-(--color-muted-foreground) space-y-2 ml-6">
-                <li>• To provide and deliver our services</li>
+                <li>• To provide and deliver my services</li>
                 <li>• To send you technical notices and support messages</li>
-                <li>• To communicate with you about products, services, and events</li>
+                <li>• To communicate with you about my projects, services, and updates</li>
                 <li>• To monitor and analyze trends and usage</li>
                 <li>• To detect, investigate, and prevent fraudulent transactions</li>
               </ul>
@@ -70,11 +59,11 @@ const PrivacyPage: React.FC = () => {
             <div className="bg-white rounded-lg shadow-sm border border-(--color-border) p-8 mb-8">
               <h2 className="heading-card text-(--color-foreground) mb-4">Information Sharing</h2>
               <p className="text-body text-(--color-muted-foreground) mb-4">
-                We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy:
+                I do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy:
               </p>
               <ul className="text-body text-(--color-muted-foreground) space-y-2 ml-6">
-                <li>• With service providers who assist us in operating our website</li>
-                <li>• When required by law or to protect our rights</li>
+                <li>• With service providers who assist me in operating my website</li>
+                <li>• When required by law or to protect my rights</li>
                 <li>• In connection with a merger, acquisition, or sale of assets</li>
               </ul>
             </div>
@@ -82,7 +71,7 @@ const PrivacyPage: React.FC = () => {
             <div className="bg-white rounded-lg shadow-sm border border-(--color-border) p-8 mb-8">
               <h2 className="heading-card text-(--color-foreground) mb-4">Data Security</h2>
               <p className="text-body text-(--color-muted-foreground)">
-                We implement appropriate security measures to protect your personal information against unauthorized access, 
+                I implement appropriate security measures to protect your personal information against unauthorized access, 
                 alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure.
               </p>
             </div>
@@ -101,12 +90,12 @@ const PrivacyPage: React.FC = () => {
             </div>
 
             <div className="bg-blue-50 rounded-lg p-8">
-              <h2 className="heading-card text-(--color-foreground) mb-4">Contact Us</h2>
+              <h2 className="heading-card text-(--color-foreground) mb-4">Contact Me</h2>
               <p className="text-body text-(--color-muted-foreground) mb-4">
-                If you have any questions about this Privacy Policy, please contact us:
+                If you have any questions about this Privacy Policy, please contact me:
               </p>
               <div className="text-body text-(--color-foreground)">
-                <p>Email: privacy@kyjahnsmith.com</p>
+                <p>Email: <a href="mailto:kyjahntsmith@gmail.com" className="text-(--color-accent) hover:underline">kyjahntsmith@gmail.com</a></p>
                 <p>Last updated: January 2025</p>
               </div>
             </div>
@@ -114,8 +103,6 @@ const PrivacyPage: React.FC = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

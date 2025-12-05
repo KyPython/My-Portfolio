@@ -87,7 +87,7 @@ export default function Services() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="inline-block px-8 py-4 bg-(--color-accent) text-white rounded-lg text-body font-semibold hover:bg-blue-700 transition-colors"
+              className="inline-block px-8 py-4 bg-(--color-accent) text-(--color-accent-foreground) rounded-lg text-body font-semibold hover:opacity-90 transition-opacity"
             >
               Get In Touch
             </Link>

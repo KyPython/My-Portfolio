@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { Button as HeadlessButton } from '@headlessui/react';
 import Link from 'next/link';
@@ -26,9 +28,9 @@ const Button: React.FC<ButtonProps> = ({
   const baseClasses = 'inline-flex items-center justify-center font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
   
   const variantClasses = {
-    primary: 'bg-(--color-primary) text-(--color-primary-foreground) hover:bg-gray-800 focus:ring-gray-500',
-    secondary: 'bg-(--color-secondary) text-(--color-secondary-foreground) hover:bg-gray-200 focus:ring-gray-300',
-    outline: 'border border-(--color-border) bg-transparent text-(--color-foreground) hover:bg-(--color-muted) focus:ring-gray-300'
+    primary: 'bg-(--color-primary) text-(--color-primary-foreground) hover:opacity-90 focus:ring-2 focus:ring-(--color-primary)/50',
+    secondary: 'bg-(--color-secondary) text-(--color-secondary-foreground) hover:opacity-90 focus:ring-2 focus:ring-(--color-secondary)/50',
+    outline: 'border border-(--color-border) bg-transparent text-(--color-foreground) hover:bg-(--color-muted) focus:ring-2 focus:ring-(--color-border)'
   };
   
   const sizeClasses = {

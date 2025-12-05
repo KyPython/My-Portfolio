@@ -1,21 +1,10 @@
 'use client';
 
 import React from 'react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
 
 const TermsPage: React.FC = () => {
-  const navigationLinks = [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Projects", href: "/projects" },
-    { label: "Contact", href: "/contact" }
-  ];
-
   return (
     <div className="min-h-screen bg-(--color-background)">
-      <Navigation links={navigationLinks} />
-      
       {/* Hero Section */}
       <section className="relative px-16 py-24 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="relative max-w-4xl mx-auto text-center">
@@ -29,7 +18,7 @@ const TermsPage: React.FC = () => {
             Terms of Service
           </h1>
           <p className="text-body-large text-(--color-muted-foreground) max-w-2xl mx-auto">
-            Please read these terms carefully before using our services. By accessing our website, you agree to be bound by these terms.
+            Please read these terms carefully before using my services. By accessing my website, you agree to be bound by these terms.
           </p>
         </div>
       </section>
@@ -49,7 +38,7 @@ const TermsPage: React.FC = () => {
           <div className="bg-white rounded-lg shadow-sm border border-(--color-border) p-8 mb-8">
             <h2 className="heading-card text-(--color-foreground) mb-4">Use License</h2>
             <p className="text-body text-(--color-muted-foreground) mb-4">
-              Permission is granted to temporarily download one copy of the materials on our website for personal, 
+              Permission is granted to temporarily download one copy of the materials on my website for personal, 
               non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
             </p>
             <ul className="text-body text-(--color-muted-foreground) space-y-2 ml-6">
@@ -63,7 +52,7 @@ const TermsPage: React.FC = () => {
           <div className="bg-white rounded-lg shadow-sm border border-(--color-border) p-8 mb-8">
             <h2 className="heading-card text-(--color-foreground) mb-4">Disclaimer</h2>
             <p className="text-body text-(--color-muted-foreground)">
-              The materials on our website are provided on an 'as is' basis. We make no warranties, expressed or implied, 
+              The materials on my website are provided on an 'as is' basis. I make no warranties, expressed or implied, 
               and hereby disclaim and negate all other warranties including without limitation, implied warranties or conditions 
               of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
             </p>
@@ -72,8 +61,8 @@ const TermsPage: React.FC = () => {
           <div className="bg-white rounded-lg shadow-sm border border-(--color-border) p-8 mb-8">
             <h2 className="heading-card text-(--color-foreground) mb-4">Limitations</h2>
             <p className="text-body text-(--color-muted-foreground)">
-              In no event shall our company or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, 
-              or due to business interruption) arising out of the use or inability to use the materials on our website, even if we or our authorized 
+              In no event shall I or my suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, 
+              or due to business interruption) arising out of the use or inability to use the materials on my website, even if I or my authorized 
               representative has been notified orally or in writing of the possibility of such damage.
             </p>
           </div>
@@ -81,16 +70,16 @@ const TermsPage: React.FC = () => {
           <div className="bg-white rounded-lg shadow-sm border border-(--color-border) p-8 mb-8">
             <h2 className="heading-card text-(--color-foreground) mb-4">Accuracy of Materials</h2>
             <p className="text-body text-(--color-muted-foreground)">
-              The materials appearing on our website could include technical, typographical, or photographic errors. 
-              We do not warrant that any of the materials on its website are accurate, complete, or current. 
-              We may make changes to the materials contained on its website at any time without notice.
+              The materials appearing on my website could include technical, typographical, or photographic errors. 
+              I do not warrant that any of the materials on my website are accurate, complete, or current. 
+              I may make changes to the materials contained on my website at any time without notice.
             </p>
           </div>
 
           <div className="bg-white rounded-lg shadow-sm border border-(--color-border) p-8 mb-8">
             <h2 className="heading-card text-(--color-foreground) mb-4">Modifications</h2>
             <p className="text-body text-(--color-muted-foreground)">
-              We may revise these terms of service for its website at any time without notice. 
+              I may revise these terms of service for my website at any time without notice. 
               By using this website, you are agreeing to be bound by the then current version of these terms of service.
             </p>
           </div>
@@ -98,18 +87,16 @@ const TermsPage: React.FC = () => {
           <div className="bg-gray-50 rounded-lg p-8">
             <h2 className="heading-card text-(--color-foreground) mb-4">Contact Information</h2>
             <p className="text-body text-(--color-muted-foreground) mb-4">
-              If you have any questions about these Terms of Service, please contact us:
+              If you have any questions about these Terms of Service, please contact me:
             </p>
             <div className="text-body text-(--color-foreground)">
-              <p>Email: legal@kyjahnsmith.com</p>
+              <p>Email: <a href="mailto:kyjahntsmith@gmail.com" className="text-(--color-accent) hover:underline">kyjahntsmith@gmail.com</a></p>
               <p>Last updated: January 2025</p>
             </div>
           </div>
 
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

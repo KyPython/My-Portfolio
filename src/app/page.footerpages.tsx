@@ -1,16 +1,8 @@
 'use client';
 
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
 const FooterPagesPreview: React.FC = () => {
-  const navigationLinks = [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Projects", href: "/projects" },
-    { label: "Contact", href: "/contact" }
-  ];
 
   const pages = [
     {
@@ -95,8 +87,6 @@ const FooterPagesPreview: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-(--color-background)">
-      <Navigation links={navigationLinks} />
-      
       {/* Hero Section */}
       <section className="relative px-16 py-24 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1618849821300-5f216d5e4937?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTAwNDR8MHwxfHNlYXJjaHwxMHx8c2VjdXJpdHklMjBkaWdpdGFsJTIwYWJzdHJhY3QlMjB0ZWNobm9sb2d5fGVufDB8MHx8Ymx1ZXwxNzU1ODI1NzIzfDA&ixlib=rb-4.1.0&q=85')] bg-cover bg-center opacity-5"></div>
@@ -230,8 +220,6 @@ const FooterPagesPreview: React.FC = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

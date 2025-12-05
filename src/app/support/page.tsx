@@ -1,17 +1,9 @@
 'use client';
 
 import React from 'react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
 import SupportForm from '../../components/SupportForm';
 
 const SupportPage: React.FC = () => {
-  const navigationLinks = [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Projects", href: "/projects" },
-    { label: "Contact", href: "/contact" }
-  ];
 
   const supportOptions = [
     {
@@ -74,8 +66,6 @@ const SupportPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-(--color-background)">
-      <Navigation links={navigationLinks} />
-      
       {/* Hero Section */}
       <section className="relative px-16 py-24 bg-gradient-to-br from-orange-50 to-red-50">
         <div className="relative max-w-4xl mx-auto text-center">
@@ -88,7 +78,7 @@ const SupportPage: React.FC = () => {
             Support Center
           </h1>
           <p className="text-body-large text-(--color-muted-foreground) max-w-2xl mx-auto">
-            Get the help you need with our comprehensive support resources and dedicated assistance.
+            Get the help you need with my comprehensive support resources and dedicated assistance.
           </p>
         </div>
       </section>
@@ -97,7 +87,7 @@ const SupportPage: React.FC = () => {
       <section className="px-16 py-20">
         <div className="max-w-6xl mx-auto">
           <h2 className="heading-section text-(--color-foreground) mb-12 text-center">
-            How Can We Help?
+            How Can I Help?
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8 mb-16">
@@ -186,7 +176,6 @@ const SupportPage: React.FC = () => {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 };

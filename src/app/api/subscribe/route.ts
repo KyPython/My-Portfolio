@@ -1,125 +1,133 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-interface ZohoContact {
-  Email: string;
-  Lead_Source: string;
-  Company?: string;
-  First_Name?: string;
-  Last_Name?: string;
-  Description?: string;
-}
-
-async function getZohoAccessToken(): Promise<string> {
-  const response = await fetch('https://accounts.zoho.com/oauth/v2/token', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-    },
-    body: new URLSearchParams({
-      refresh_token: process.env.ZOHO_REFRESH_TOKEN!,
-      client_id: process.env.ZOHO_CLIENT_ID!,
-      client_secret: process.env.ZOHO_CLIENT_SECRET!,
-      grant_type: 'refresh_token',
-    }),
-  });
-
-  if (!response.ok) {
-    throw new Error(`Zoho auth failed: ${response.statusText}`);
-  }
-
-  const data = await response.json();
-  return data.access_token;
-}
-
-async function createZohoLead(contactData: ZohoContact, accessToken: string) {
-  const response = await fetch('https://www.zohoapis.com/crm/v2/Leads', {
-    method: 'POST',
-    headers: {
-      'Authorization': `Zoho-oauthtoken ${accessToken}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      data: [contactData]
-    }),
-  });
-
-  if (!response.ok) {
-    throw new Error(`Zoho CRM API failed: ${response.statusText}`);
-  }
-
-  return response.json();
-}
+const HUBSPOT_PORTAL_ID = '243698495';
+const HUBSPOT_API_KEY = process.env.HUBSPOT_API_KEY; // Optional: for Contacts API
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { email, name, company, message, source = 'Website Newsletter' } = body;
+    const { email, source } = body;
 
-    if (!email) {
+    // Validate email
+    if (!email || !email.trim()) {
       return NextResponse.json(
-        { error: 'Email is required' },
+        { success: false, error: 'Email is required' },
         { status: 400 }
       );
     }
 
-    // Get fresh access token
-    const accessToken = await getZohoAccessToken();
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.trim())) {
+      return NextResponse.json(
+        { success: false, error: 'Invalid email format' },
+        { status: 400 }
+      );
+    }
 
-    // Parse name if provided
-    const nameParts = name ? name.split(' ') : ['', ''];
-    const firstName = nameParts[0] || '';
-    const lastName = nameParts.slice(1).join(' ') || '';
+    // Get the page URL they came from
+    const referer = request.headers.get('referer') || '';
+    const origin = request.headers.get('origin') || '';
+    const pageUrl = referer || origin || 'Portfolio Website';
+    
+    // Create detailed source information
+    const detailedSource = `Portfolio Website - ${source || 'Newsletter Signup'} - ${pageUrl}`;
+    const leadSource = 'Portfolio Website';
+    const formSource = source || 'Newsletter Signup';
 
-    // Prepare contact data for Zoho
-    const contactData: ZohoContact = {
-      Email: email,
-      Lead_Source: `Portfolio Website - ${source}`,
-      First_Name: firstName || 'Newsletter',
-      Last_Name: lastName || 'Subscriber',
-      Company: company || 'Unknown',
-      Description: message || `🌐 PORTFOLIO WEBSITE LEAD\n\nNewsletter subscription from kyjahnsmith.com\nSource: ${source}\nSubscribed: ${new Date().toLocaleString()}`,
-    };
-
-    // Create lead in Zoho CRM
-    const result = await createZohoLead(contactData, accessToken);
-
-    // Also trigger Zapier webhook if available
-    if (process.env.ZAPIER_WEBHOOK_URL) {
+    // Submit to HubSpot
+    let hubspotSuccess = false;
+    
+    if (HUBSPOT_API_KEY) {
+      // Use HubSpot Contacts API to create/update contact and add to newsletter list
+      // Supports both API keys (hapikey) and Personal Access Tokens (Bearer token)
       try {
-        await fetch(process.env.ZAPIER_WEBHOOK_URL, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            email,
-            name,
-            company,
-            message,
-            source,
-            timestamp: new Date().toISOString(),
-          }),
-        });
-      } catch (zapierError) {
-        console.error('Zapier webhook failed:', zapierError);
-        // Don't fail the main request if Zapier fails
+        const isPAT = HUBSPOT_API_KEY.startsWith('pat-');
+        const apiUrl = isPAT
+          ? `https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/${encodeURIComponent(email.trim())}`
+          : `https://api.hubapi.com/contacts/v1/contact/createOrUpdate/email/${encodeURIComponent(email.trim())}?hapikey=${HUBSPOT_API_KEY}`;
+        
+        const hubspotResponse = await fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              ...(isPAT && { 'Authorization': `Bearer ${HUBSPOT_API_KEY}` }),
+            },
+            body: JSON.stringify({
+              properties: [
+                { property: 'email', value: email.trim() },
+                { property: 'source', value: detailedSource },
+                { property: 'hs_lead_status', value: 'NEW' },
+                { property: 'lead_source', value: leadSource },
+                { property: 'form_source', value: formSource },
+                { property: 'page_url', value: pageUrl },
+                { property: 'newsletter_subscription', value: 'true' },
+              ],
+            }),
+          }
+        );
+
+        if (hubspotResponse.ok) {
+          hubspotSuccess = true;
+        }
+      } catch (hubspotError) {
+        console.error('HubSpot API error:', hubspotError);
       }
     }
 
+    // Also submit to HubSpot form endpoint if form GUID is available
+    // Replace 'YOUR_FORM_GUID' with your actual HubSpot newsletter form GUID
+    const formGuid = process.env.HUBSPOT_NEWSLETTER_FORM_GUID;
+    
+    if (formGuid) {
+      try {
+        const formResponse = await fetch(
+          `https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${formGuid}`,
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              fields: [
+                {
+                  name: 'email',
+                  value: email.trim(),
+                },
+                {
+                  name: 'source',
+                  value: detailedSource,
+                },
+              ],
+              context: {
+                pageUri: pageUrl,
+                pageName: 'Portfolio Newsletter Signup',
+                hutk: request.headers.get('cookie')?.match(/hubspotutk=([^;]+)/)?.[1] || '',
+              },
+            }),
+          }
+        );
+
+        if (formResponse.ok) {
+          hubspotSuccess = true;
+        }
+      } catch (formError) {
+        console.error('HubSpot form submission error:', formError);
+      }
+    }
+
+    // Return success even if HubSpot submission fails (graceful degradation)
     return NextResponse.json({
       success: true,
-      message: 'Successfully subscribed and added to CRM',
-      zohoResult: result,
+      message: 'Newsletter subscription successful',
+      hubspotSubmitted: hubspotSuccess,
     });
-
   } catch (error) {
-    console.error('Newsletter subscription error:', error);
+    console.error('Subscribe form error:', error);
     return NextResponse.json(
-      { 
-        error: 'Failed to process subscription',
-        details: error instanceof Error ? error.message : 'Unknown error'
-      },
+      { success: false, error: 'Internal server error' },
       { status: 500 }
     );
   }
 }
+

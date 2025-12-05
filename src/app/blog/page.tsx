@@ -1,8 +1,6 @@
 'use client';
 
 import React from 'react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
 
 interface BlogPost {
   id: number;
@@ -16,12 +14,6 @@ interface BlogPost {
 }
 
 const BlogPage: React.FC = () => {
-  const navigationLinks = [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Projects", href: "/projects" },
-    { label: "Contact", href: "/contact" }
-  ];
 
   const blogPosts: BlogPost[] = [
     {
@@ -60,8 +52,6 @@ const BlogPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-(--color-background)">
-      <Navigation links={navigationLinks} />
-      
       {/* Hero Section */}
       <section className="relative px-16 py-24 bg-gradient-to-br from-green-50 to-blue-50">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTAwNDR8MHwxfHNlYXJjaHwxfHxsYXB0b3AlMjB3b3Jrc3BhY2UlMjBkZXNrJTIwY29mZmVlfGVufDB8MHx8fDE3NTU4MjU3MjN8MA&ixlib=rb-4.1.0&q=85')] bg-cover bg-center opacity-10"></div>
@@ -217,8 +207,6 @@ const BlogPage: React.FC = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

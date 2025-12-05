@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
 import Button from './ui/Button';
@@ -23,7 +25,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ title, description }) => {
   };
 
   return (
-    <section className="px-16 py-20 bg-white">
+    <section className="px-16 py-20 bg-(--color-background)">
       <div className="flex flex-col items-center gap-20">
         <div className="flex flex-col items-center gap-8 max-w-4xl text-center">
           <div className="flex flex-col gap-6">

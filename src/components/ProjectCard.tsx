@@ -24,11 +24,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <div className="flex flex-col gap-8">
       {liveUrl ? (
-        <div className="w-full h-60 mb-2 bg-gray-100 rounded-lg overflow-hidden">
+        <div className="w-full h-60 mb-2 bg-(--color-muted) rounded-lg overflow-hidden">
           <iframe
             src={liveUrl}
             title={title}
             className="w-full h-full border-0"
+            suppressHydrationWarning
           />
         </div>
       ) : (
@@ -52,7 +53,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               href={liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-3 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm"
+              className="px-3 py-2 bg-(--color-accent) text-(--color-accent-foreground) rounded hover:opacity-90 text-small transition-opacity"
             >
               Live Demo
             </a>
@@ -62,7 +63,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               href={repoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-3 py-2 border border-gray-300 rounded hover:bg-gray-100 text-sm"
+              className="px-3 py-2 border border-(--color-border) rounded hover:bg-(--color-muted) text-small transition-colors"
             >
               Source Code
             </a>

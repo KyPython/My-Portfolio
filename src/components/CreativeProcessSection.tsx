@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react';
 import ProcessCard from './ProcessCard';
 import IdeaIcon from './icons/IdeaIcon';
@@ -25,7 +27,7 @@ const CreativeProcessSection: React.FC = () => {
     {
       icon: <ResearchIcon width={40} height={40} color="#000000" />,
       title: "Research Insights: Understanding User Needs and Market Gaps",
-      description: "Discover the insights that shaped our project hypotheses and solutions.",
+      description: "Discover the insights that shaped my project hypotheses and solutions.",
       actionText: "Explore",
       details: "Deep user research and market analysis inform every decision. I use surveys, interviews, and competitive analysis to ensure solutions address real problems effectively."
     }
@@ -36,7 +38,7 @@ const CreativeProcessSection: React.FC = () => {
   };
 
   return (
-    <section className="px-16 py-20 bg-white" data-section="process">
+    <section className="px-16 py-20 bg-(--color-background)" data-section="process">
       <div className="flex flex-col gap-20">
         <h2 className="heading-section text-(--color-foreground) max-w-3xl">
           Exploring the Creative Process Behind Each Project: A Journey of Discovery

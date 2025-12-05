@@ -3,7 +3,7 @@ import { Button } from '@headlessui/react';
 
 export default function About() {
   return (
-    <main className="min-h-screen bg-(--color-background) py-20 px-4">
+    <div className="py-20 px-4">
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="heading-hero text-(--color-foreground) mb-8">About Me</h1>
         
@@ -48,11 +48,11 @@ export default function About() {
 
         <Link
           href="/projects"
-          className="inline-block px-8 py-4 bg-(--color-accent) text-white rounded-lg text-body font-semibold hover:bg-blue-700 transition-colors"
+          className="inline-block px-8 py-4 bg-(--color-accent) text-(--color-accent-foreground) rounded-lg text-body font-semibold hover:opacity-90 transition-opacity"
         >
           See My Projects
         </Link>
       </div>
-    </main>
+    </div>
   );
 }

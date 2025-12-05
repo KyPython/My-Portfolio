@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <main className="min-h-screen bg-(--color-background) py-20 px-4">
+    <div className="py-20 px-4">
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="heading-hero text-(--color-foreground) mb-8">Contact</h1>
         
@@ -15,7 +15,7 @@ export default function Contact() {
             <h3 className="heading-card text-(--color-foreground) mb-4">Email</h3>
             <a
               href="mailto:kyjahntsmith@gmail.com"
-              className="text-body text-(--color-accent) hover:text-blue-700 transition-colors break-all"
+              className="text-body text-(--color-accent) hover:opacity-80 transition-opacity break-all"
             >
               kyjahntsmith@gmail.com
             </a>
@@ -27,7 +27,7 @@ export default function Contact() {
               href="https://www.linkedin.com/in/kyjahn-smith-16487224b/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-body text-(--color-accent) hover:text-blue-700 transition-colors break-all"
+              className="text-body text-(--color-accent) hover:opacity-80 transition-opacity break-all"
             >
               linkedin.com/in/kyjahn-smith-16487224b/
             </a>
@@ -39,13 +39,13 @@ export default function Contact() {
               href="https://github.com/KyPython"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-body text-(--color-accent) hover:text-blue-700 transition-colors break-all"
+              className="text-body text-(--color-accent) hover:opacity-80 transition-opacity break-all"
             >
               github.com/KyPython
             </a>
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

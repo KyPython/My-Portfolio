@@ -2,7 +2,8 @@
 export enum ProjectCategory {
   WEB_DEVELOPMENT = "Web Development",
   APP_DEVELOPMENT = "App Development", 
-  GAME_DEVELOPMENT = "Game Development"
+  GAME_DEVELOPMENT = "Game Development",
+  FULL_STACK = "Full Stack"
 }
 
 export enum ButtonVariant {
@@ -133,11 +134,22 @@ export const mockRootProps = {
     repoUrl: "https://github.com/KyPython/Alt-Lens-App-New",
     featured: true,
   },
+    {
+      id: "skillsync",
+      title: "SkillSync",
+      category: ProjectCategory.FULL_STACK as const,
+      description: "Full-stack microservices productivity application demonstrating multi-language backend development. Features task management (CRUD), goal tracking with progress bars, Pomodoro timer, motivational quotes API, and a real-time dashboard. Built with a microservices architecture using Java (Spring Boot), C# (.NET), Go (Gin), and Node.js (Express), all orchestrated through an API Gateway pattern and containerized with Docker.",
+      tech: ["Java", "Spring Boot", "C#", ".NET", "Go", "Gin", "Node.js", "Express", "React", "TypeScript", "MongoDB", "Docker"],
+      image: "/images/skillsync.png",
+      liveUrl: "https://skillsync-snowy-phi.vercel.app/",
+      repoUrl: "https://github.com/KyPython/skillsync",
+      featured: true
+    },
   ],
   personalInfo: {
-    name: "KyPython",
-    email: "ky@python.dev",
-    linkedIn: "https://linkedin.com/in/kypython",
+    name: "Ky Jahn Smith",
+    email: "kyjahntsmith@gmail.com",
+    linkedIn: "https://www.linkedin.com/in/kyjahn-smith-16487224b/",
     github: "https://github.com/KyPython",
     description: "As a versatile developer, I craft tailored solutions that elevate user experiences and drive business success. My projects reflect a blend of creativity and technical expertise, ensuring impactful results for every client."
   },

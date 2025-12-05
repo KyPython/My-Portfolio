@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
 
@@ -55,7 +57,7 @@ const ProjectShowcaseSection: React.FC<ProjectShowcaseSectionProps> = ({
   ];
 
   return (
-    <section className="px-16 py-20 bg-white" data-section="projects">
+    <section className="px-16 py-20 bg-(--color-background)" data-section="projects">
       <div className="flex flex-col gap-20">
         <h2 className="heading-section text-(--color-foreground) text-center max-w-4xl mx-auto">
           Explore My Top Projects That Showcase My Development Versatility
@@ -88,7 +90,7 @@ const ProjectShowcaseSection: React.FC<ProjectShowcaseSectionProps> = ({
               {selectedProject.liveUrl && (
                 <button
                   onClick={() => window.open(selectedProject.liveUrl, "_blank")}
-                  className="px-4 py-2 bg-(--color-accent) text-white rounded-md hover:bg-blue-600 transition-colors"
+                  className="px-4 py-2 bg-(--color-accent) text-(--color-accent-foreground) rounded-md hover:opacity-90 transition-opacity"
                 >
                   View Live
                 </button>

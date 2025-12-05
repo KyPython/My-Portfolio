@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const ProjectRecommendationsSection: React.FC = () => {
   return (
-    <section className="px-16 py-20 bg-white">
+    <section className="px-16 py-20 bg-(--color-background)">
       <div className="flex items-center gap-20">
         <div className="flex-1 flex flex-col gap-6">
           <h2 className="heading-section text-(--color-foreground)">
@@ -11,7 +11,7 @@ const ProjectRecommendationsSection: React.FC = () => {
           </h2>
           <p className="text-body-large text-(--color-foreground)">
             Explore projects that align with your preferences and browsing history. 
-            Our personalized suggestions help you find the most relevant work that 
+            My personalized suggestions help you find the most relevant work that 
             showcases my versatility as a developer.
           </p>
         </div>
