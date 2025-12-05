@@ -206,7 +206,7 @@ export const mockRootProps = {
     email: "kyjahntsmith@gmail.com",
     linkedIn: "https://www.linkedin.com/in/kyjahn-smith-16487224b/",
     github: "https://github.com/KyPython",
-    description: "As a versatile developer, I craft tailored solutions that elevate user experiences and drive business success. My projects reflect a blend of creativity and technical expertise, ensuring impactful results for every client."
+    description: "Highly motivated and versatile aspiring AI/ML Engineer and UI/UX Developer with a strong foundation in programming and specialized expertise in machine learning (Computer Vision, Time Series Analysis, Deep Learning, Game AI, Reinforcement Learning). Proficient in UI/UX Design, CSS, and HTML, demonstrating a comprehensive understanding of both front-end development and human-centered design principles."
   },
   navigationLinks: [
     { label: "Home", href: "/" },

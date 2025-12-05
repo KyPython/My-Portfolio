@@ -13,12 +13,50 @@ export interface Milestone {
   link?: string;         // project URL, certificate URL, or learning resource
 }
 
-// Example milestones - add your own learning and career milestones here
+// Career and learning milestones for Ky Jahn Smith
 export const milestones: Milestone[] = [
+  // Employment History
+  {
+    id: 'game-presenter-evolution',
+    date: '2024-12-01',
+    title: 'Game Presenter',
+    type: 'job',
+    description: 'Facilitate live casino games at Evolution Gaming, engaging players with clear rules and dynamic presentation. Maintain high energy and professionalism to enhance player satisfaction and retention.',
+    technologies: ['Live Streaming', 'Customer Engagement', 'Game Management'],
+    link: 'https://www.evolution.com/'
+  },
+  {
+    id: 'cashier-dunkin',
+    date: '2021-02-01',
+    title: 'Cashier/Customer Service',
+    type: 'job',
+    description: 'Handled transactions and resolved customer issues at Dunkin, ensuring accurate cash flow and efficient service delivery. Collaborated with team to optimize order processes.',
+    technologies: ['Customer Service', 'Cash Management', 'Team Collaboration']
+  },
+  {
+    id: 'camp-counselor-youth-works',
+    date: '2019-07-01',
+    title: 'Camp Counselor',
+    type: 'job',
+    description: 'Ensured safety and happiness of children at Youth Works through collaboration with team. Coordinated activities and led various games to enhance children\'s development and enjoyment.',
+    technologies: ['Childcare', 'Activity Coordination', 'Team Leadership']
+  },
+  
+  // Education
+  {
+    id: 'computer-engineering-degree',
+    date: '2025-01-01',
+    title: 'Bachelor of Science, Computer Engineering',
+    type: 'learning',
+    description: 'Pursuing Computer Engineering degree at University of Bridgeport, expected graduation May 2029. Building strong foundation in programming, AI/ML, and software engineering.',
+    technologies: ['Computer Engineering', 'Programming', 'Software Engineering'],
+    link: 'https://www.bridgeport.edu/'
+  },
+  
   // Projects
   {
     id: 'offline-tasks-pwa',
-    date: '2024-12-01',
+    date: '2025-12-01',
     title: 'Offline Tasks PWA',
     type: 'project',
     description: 'Built a production-ready Progressive Web App with offline-first architecture for task management.',
@@ -27,7 +65,7 @@ export const milestones: Milestone[] = [
   },
   {
     id: 'offline-media-pwa',
-    date: '2024-12-04',
+    date: '2025-12-04',
     title: 'Offline Media PWA',
     type: 'project',
     description: 'Created a PWA for media submissions with offline-first architecture and background sync.',
@@ -36,7 +74,7 @@ export const milestones: Milestone[] = [
   },
   {
     id: 'accessibleos',
-    date: '2024-12-05',
+    date: '2025-12-05',
     title: 'AccessibleOS',
     type: 'project',
     description: 'Built a comprehensive accessible task management system with WCAG 2.1 AA compliance.',
@@ -45,7 +83,7 @@ export const milestones: Milestone[] = [
   },
   {
     id: 'skillsync',
-    date: '2024-11-15',
+    date: '2025-11-15',
     title: 'SkillSync - Microservices Architecture',
     type: 'project',
     description: 'Developed a full-stack microservices productivity app using Java, C#, Go, and Node.js.',
@@ -54,7 +92,7 @@ export const milestones: Milestone[] = [
   },
   {
     id: 'cat-ate-my-source-code',
-    date: '2024-12-03',
+    date: '2025-12-03',
     title: 'cat-ate-my-source-code CLI Tool',
     type: 'project',
     description: 'Created a pragmatic backup & restore CLI tool for code projects with versioned backups.',
@@ -63,7 +101,7 @@ export const milestones: Milestone[] = [
   },
   {
     id: 'software-entropy',
-    date: '2024-12-05',
+    date: '2025-12-05',
     title: 'Software Entropy CLI Tool',
     type: 'project',
     description: 'Built a code-smell detection CLI tool with pluggable rule system and multiple output formats.',
@@ -71,10 +109,95 @@ export const milestones: Milestone[] = [
     link: 'https://github.com/KyPython/software-entropy'
   },
   
-  // Learning milestones
+  // Kaggle Certifications & Courses
+  {
+    id: 'kaggle-intro-programming',
+    date: '2025-01-15',
+    title: 'Kaggle: Intro to Programming',
+    type: 'course',
+    description: 'Completed Kaggle course on programming fundamentals, building strong foundation in coding practices.',
+    technologies: ['Python', 'Programming Fundamentals'],
+    link: 'https://www.kaggle.com/learn/intro-to-programming'
+  },
+  {
+    id: 'kaggle-intro-ml',
+    date: '2025-02-01',
+    title: 'Kaggle: Intro to Machine Learning',
+    type: 'course',
+    description: 'Completed introduction to machine learning course covering core ML concepts and techniques.',
+    technologies: ['Machine Learning', 'Python', 'Scikit-learn'],
+    link: 'https://www.kaggle.com/learn/intro-to-machine-learning'
+  },
+  {
+    id: 'kaggle-intermediate-ml',
+    date: '2025-02-15',
+    title: 'Kaggle: Intermediate Machine Learning',
+    type: 'course',
+    description: 'Advanced machine learning techniques including feature engineering, cross-validation, and pipelines.',
+    technologies: ['Machine Learning', 'Feature Engineering', 'Cross-Validation'],
+    link: 'https://www.kaggle.com/learn/intermediate-machine-learning'
+  },
+  {
+    id: 'kaggle-intro-deep-learning',
+    date: '2025-03-01',
+    title: 'Kaggle: Intro to Deep Learning',
+    type: 'course',
+    description: 'Introduction to deep learning and neural networks, building foundational knowledge in AI.',
+    technologies: ['Deep Learning', 'Neural Networks', 'TensorFlow', 'Keras'],
+    link: 'https://www.kaggle.com/learn/intro-to-deep-learning'
+  },
+  {
+    id: 'kaggle-computer-vision',
+    date: '2025-03-15',
+    title: 'Kaggle: Computer Vision',
+    type: 'course',
+    description: 'Specialized course in computer vision, image processing, and convolutional neural networks.',
+    technologies: ['Computer Vision', 'CNN', 'Image Processing', 'Deep Learning'],
+    link: 'https://www.kaggle.com/learn/computer-vision'
+  },
+  {
+    id: 'kaggle-time-series',
+    date: '2025-04-01',
+    title: 'Kaggle: Time Series',
+    type: 'course',
+    description: 'Time series analysis and forecasting techniques for temporal data.',
+    technologies: ['Time Series', 'Forecasting', 'ARIMA', 'LSTM'],
+    link: 'https://www.kaggle.com/learn/time-series'
+  },
+  {
+    id: 'kaggle-ml-explainability',
+    date: '2025-04-15',
+    title: 'Kaggle: Machine Learning Explainability',
+    type: 'course',
+    description: 'Techniques for interpreting and explaining machine learning models.',
+    technologies: ['ML Explainability', 'SHAP', 'Model Interpretation'],
+    link: 'https://www.kaggle.com/learn/machine-learning-explainability'
+  },
+  {
+    id: 'kaggle-game-ai-rl',
+    date: '2025-05-01',
+    title: 'Kaggle: Game AI and Reinforcement Learning',
+    type: 'course',
+    description: 'Game AI development and reinforcement learning algorithms for intelligent agents.',
+    technologies: ['Reinforcement Learning', 'Game AI', 'Q-Learning', 'Deep RL'],
+    link: 'https://www.kaggle.com/learn/intro-to-game-ai-and-reinforcement-learning'
+  },
+  
+  // CodeSignal Assessment
+  {
+    id: 'codesignal-data-structures',
+    date: '2025-05-15',
+    title: 'CodeSignal: Data Structures Assessment',
+    type: 'course',
+    description: 'Completed CodeSignal assessment demonstrating proficiency in Linked Lists, Stacks, and Queues in Python.',
+    technologies: ['Python', 'Data Structures', 'Linked Lists', 'Stacks', 'Queues'],
+    link: 'https://codesignal.com/'
+  },
+  
+  // Learning Milestones
   {
     id: 'pwa-mastery',
-    date: '2024-11-20',
+    date: '2025-11-20',
     title: 'Mastered Progressive Web Apps',
     type: 'learning',
     description: 'Deep dive into PWA architecture, service workers, and offline-first development patterns.',
@@ -83,7 +206,7 @@ export const milestones: Milestone[] = [
   },
   {
     id: 'microservices-learning',
-    date: '2024-10-15',
+    date: '2025-10-15',
     title: 'Microservices Architecture Patterns',
     type: 'learning',
     description: 'Learned microservices patterns, API Gateway design, and multi-language backend development.',
@@ -91,41 +214,28 @@ export const milestones: Milestone[] = [
   },
   {
     id: 'accessibility-deep-dive',
-    date: '2024-11-10',
+    date: '2025-11-10',
     title: 'WCAG 2.1 AA Compliance',
     type: 'learning',
     description: 'Comprehensive study of web accessibility standards and implementation practices.',
     technologies: ['WCAG 2.1', 'ARIA', 'Semantic HTML', 'Screen Readers', 'Keyboard Navigation'],
     link: 'https://www.w3.org/WAI/WCAG21/quickref/'
   },
-  
-  // Courses (example - replace with your actual courses)
   {
-    id: 'advanced-typescript',
-    date: '2024-09-01',
-    title: 'Advanced TypeScript Patterns',
-    type: 'course',
-    description: 'Completed comprehensive course on advanced TypeScript features and design patterns.',
-    technologies: ['TypeScript', 'Design Patterns', 'Type System'],
-    link: '#'
+    id: 'ai-ml-foundation',
+    date: '2025-01-01',
+    title: 'AI/ML Engineering Foundation',
+    type: 'learning',
+    description: 'Building expertise in Computer Vision, Time Series Analysis, Deep Learning, Game AI, and Reinforcement Learning.',
+    technologies: ['Computer Vision', 'Time Series', 'Deep Learning', 'Reinforcement Learning', 'RAG', 'Fine-Tuning']
   },
   {
-    id: 'react-performance',
-    date: '2024-08-15',
-    title: 'React Performance Optimization',
-    type: 'course',
-    description: 'Learned React optimization techniques including memoization, code splitting, and lazy loading.',
-    technologies: ['React', 'Performance', 'Optimization', 'Bundle Analysis']
-  },
-  
-  // Jobs/Career milestones (example - replace with your actual career milestones)
-  {
-    id: 'full-stack-developer',
-    date: '2024-01-01',
-    title: 'Full Stack Developer',
-    type: 'job',
-    description: 'Started role focusing on building scalable web applications with modern technologies.',
-    technologies: ['React', 'Node.js', 'TypeScript', 'PostgreSQL', 'AWS']
+    id: 'full-stack-mastery',
+    date: '2025-06-01',
+    title: 'Full Stack Development Mastery',
+    type: 'learning',
+    description: 'Comprehensive understanding of frontend (React, React Native) and backend (Node.js, Express) development.',
+    technologies: ['React', 'React Native', 'Node.js', 'Express', 'TypeScript', 'Supabase', 'Firebase']
   }
 ];
 
@@ -161,4 +271,5 @@ export function filterMilestonesByType(milestones: Milestone[], type: MilestoneT
 export function getMilestoneTypes(): MilestoneType[] {
   return ['project', 'course', 'job', 'learning'];
 }
+
 
