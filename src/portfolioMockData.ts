@@ -211,6 +211,7 @@ export const mockRootProps = {
   navigationLinks: [
     { label: "Home", href: "/" },
     { label: "Projects", href: "/projects" },
+    { label: "Knowledge", href: "/knowledge" },
     { label: "About Me", href: "/about" },
     { label: "Contact", href: "/contact" }
   ]

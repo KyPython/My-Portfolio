@@ -58,6 +58,7 @@ const Footer: React.FC = () => {
       links: [
         { label: "Home Page", href: "/" },
         { label: "Projects List", href: "/projects" },
+        { label: "Knowledge Portfolio", href: "/knowledge" },
         { label: "About Me", href: "/about" },
         { label: "Contact Me", href: "/contact" },
         { label: "Blog Posts", href: "/blog" }

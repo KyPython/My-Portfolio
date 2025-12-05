@@ -17,6 +17,7 @@ const SitemapPage: React.FC = () => {
         { label: "Home", href: "/", description: "Welcome page and portfolio overview" },
         { label: "About", href: "/about", description: "Learn about my background and experience" },
         { label: "Projects", href: "/projects", description: "Showcase of my work and case studies" },
+        { label: "Knowledge", href: "/knowledge", description: "Learning journey, milestones, and career timeline" },
         { label: "Contact", href: "/contact", description: "Get in touch for collaborations" },
         { label: "Services", href: "/services", description: "Web development services offered" }
       ]
