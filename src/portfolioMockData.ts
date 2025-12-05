@@ -206,7 +206,7 @@ export const mockRootProps = {
       category: ProjectCategory.FULL_STACK as const,
       description: "A minimal kanban board application designed for iterative contribution and collaborative improvement. Follows the 'Stone Soup' philosophy—starting with a simple foundation that invites collaborative enhancement. Features three columns (Ideas, In Progress, Done), full CRUD operations for cards, and a clean, intuitive interface. Built with React and TypeScript frontend, Node.js and Express backend, with comprehensive testing.",
       tech: ["React", "TypeScript", "Node.js", "Express", "Jest", "Kanban", "Full Stack"],
-      image: "/images/project-placeholder.png",
+      image: "/images/stone-soup-board.png",
       liveUrl: "https://stone-soup-board.vercel.app/",
       repoUrl: "https://github.com/KyPython/stone-soup-board",
       featured: true
