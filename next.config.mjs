@@ -8,10 +8,6 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  env: {},
   images: {
     remotePatterns: [
       {
@@ -23,7 +19,10 @@ const nextConfig = {
         hostname: "**",
       },
     ],
+    unoptimized: false,
   },
+  // Add empty turbopack config to allow webpack config to work
+  turbopack: {},
   webpack: (config, options) => {
     config.devtool =
       process.env.NODE_ENV === "production" ? "source-map" : false;
