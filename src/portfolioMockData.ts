@@ -244,6 +244,17 @@ export const mockRootProps = {
       repoUrl: "https://github.com/KyPython/dry-refactor-sample",
       featured: true
     },
+    {
+      id: "orthogonal-editor",
+      title: "Orthogonal Editor",
+      category: ProjectCategory.WEB_DEVELOPMENT as const,
+      description: "A minimal text editor demonstrating orthogonality and modular design through a plugin system. Features low coupling and high cohesion with plugins that operate independently. Includes built-in plugins for word count, search, and text transformation. Demonstrates separation of concerns, dependency inversion, and the open/closed principle. Built with React and TypeScript, showcasing extensible architecture where new plugins can be added without modifying core editor code.",
+      tech: ["React", "TypeScript", "Vite", "Plugin Architecture", "Modular Design", "Orthogonality"],
+      image: "/images/orthogonal-editor.png",
+      liveUrl: "https://orthogonal-editor.vercel.app/",
+      repoUrl: "https://github.com/KyPython/orthogonal-editor",
+      featured: true
+    },
   ],
   personalInfo: {
     name: "Ky Jahn Smith",
