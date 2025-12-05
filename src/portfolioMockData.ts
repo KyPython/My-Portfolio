@@ -299,6 +299,17 @@ export const mockRootProps = {
       repoUrl: "https://github.com/KyPython/estimate-tracker",
       featured: true
     },
+    {
+      id: "plain-text-tools",
+      title: "Plain Text Tools",
+      category: ProjectCategory.APP_DEVELOPMENT as const,
+      description: "A collection of utilities and command-line tools for processing and manipulating plain text files. Provides practical text processing capabilities for developers working with plain text formats, supporting common operations like text transformation, filtering, formatting, and analysis. Built as modular CLI tools that can be used independently or composed together for complex text processing workflows. Demonstrates the power of simple, focused tools that do one thing well, following Unix philosophy principles from The Pragmatic Programmer.",
+      tech: ["TypeScript", "Node.js", "CLI", "Text Processing", "File Utilities"],
+      image: "/images/project-placeholder.png",
+      liveUrl: "",
+      repoUrl: "https://github.com/KyPython/plain-text-tools",
+      featured: true
+    },
   ],
   personalInfo: {
     name: "Ky Jahn Smith",

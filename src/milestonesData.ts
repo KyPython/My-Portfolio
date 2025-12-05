@@ -135,6 +135,15 @@ export const milestones: Milestone[] = [
     technologies: ['React', 'TypeScript', 'Node.js', 'Express', 'SQLite', 'Vite', 'Full Stack'],
     link: 'https://estimate-tracker-1nke5ujsq-kypythons-projects.vercel.app/'
   },
+  {
+    id: 'plain-text-tools',
+    date: '2025-12-05',
+    title: 'Plain Text Tools',
+    type: 'project',
+    description: 'Created a collection of CLI utilities for processing and manipulating plain text files.',
+    technologies: ['TypeScript', 'Node.js', 'CLI', 'Text Processing', 'File Utilities'],
+    link: 'https://github.com/KyPython/plain-text-tools'
+  },
   
   // Kaggle Certifications & Courses
   {
