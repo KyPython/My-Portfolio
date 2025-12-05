@@ -222,6 +222,17 @@ export const mockRootProps = {
       repoUrl: "https://github.com/KyPython/good-enough-soup",
       featured: true
     },
+    {
+      id: "communicate-app",
+      title: "Communicate",
+      category: ProjectCategory.FULL_STACK as const,
+      description: "A minimal team communication web app demonstrating good communication patterns: channels, messages, and threaded replies. Features real-time updates via WebSocket, organized channel-based conversations, and threaded replies to keep discussions focused. Built with React and TypeScript frontend, Node.js and Express backend with Socket.IO for real-time communication. Inspired by communication principles from The Pragmatic Programmer.",
+      tech: ["React", "TypeScript", "Node.js", "Express", "Socket.IO", "WebSocket", "Real-time", "Full Stack"],
+      image: "/images/communicate-app.png",
+      liveUrl: "https://communicate-app.vercel.app/",
+      repoUrl: "https://github.com/KyPython/communicate-app",
+      featured: true
+    },
   ],
   personalInfo: {
     name: "Ky Jahn Smith",
