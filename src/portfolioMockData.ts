@@ -189,6 +189,17 @@ export const mockRootProps = {
       repoUrl: "https://github.com/KyPython/cat-ate-my-source-code",
       featured: true
     },
+    {
+      id: "software-entropy",
+      title: "Software Entropy",
+      category: ProjectCategory.APP_DEVELOPMENT as const,
+      description: "A code-smell detection CLI tool that scans code repositories for common issues like long functions, large files, and TODO/FIXME density. Features a pluggable rule system for easy extension, multiple output formats (JSON and pretty console), configurable thresholds, and efficient scanning with customizable file patterns. Well-tested with comprehensive Jest test suite and designed for fast, actionable code quality insights.",
+      tech: ["TypeScript", "Node.js", "CLI", "Jest", "Code Analysis", "AST"],
+      image: "/images/project-placeholder.png",
+      liveUrl: "",
+      repoUrl: "https://github.com/KyPython/software-entropy",
+      featured: true
+    },
   ],
   personalInfo: {
     name: "Ky Jahn Smith",
