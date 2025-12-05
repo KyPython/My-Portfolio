@@ -178,6 +178,17 @@ export const mockRootProps = {
       repoUrl: "https://github.com/KyPython/AccessibleOS",
       featured: true
     },
+    {
+      id: "cat-ate-my-source-code",
+      title: "cat-ate-my-source-code",
+      category: ProjectCategory.APP_DEVELOPMENT as const,
+      description: "A pragmatic backup & restore CLI tool for code projects, focused on disaster recovery and redundancy habits. Inspired by 'The Pragmatic Programmer', this tool helps developers develop good backup habits and protect code from disasters. Features versioned backups with timestamps, support for multiple projects, configurable exclude patterns, automatic retention policies, dry-run mode, and cross-platform compatibility. Designed with a config-driven approach for easy setup and management.",
+      tech: ["TypeScript", "Node.js", "CLI", "File System API", "npm"],
+      image: "/images/project-placeholder.png",
+      liveUrl: "",
+      repoUrl: "https://github.com/KyPython/cat-ate-my-source-code",
+      featured: true
+    },
   ],
   personalInfo: {
     name: "Ky Jahn Smith",
