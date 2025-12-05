@@ -266,6 +266,28 @@ export const mockRootProps = {
       repoUrl: "https://github.com/KyPython/reversible-flags",
       featured: true
     },
+    {
+      id: "tracer-bullets-app",
+      title: "Tracer Bullets App",
+      category: ProjectCategory.FULL_STACK as const,
+      description: "A demonstration of the 'tracer bullets' approach from The Pragmatic Programmer—building a minimal end-to-end implementation to validate architecture, integration points, and system design before full development. Tracer bullets provide immediate feedback on whether the architecture works, allowing for early course correction. This app showcases a working skeleton that demonstrates the full data flow from frontend to backend, validating the chosen technologies and integration patterns. Built with React and TypeScript frontend, Node.js and Express backend, demonstrating the principle of building working code that can be iteratively refined rather than building components in isolation.",
+      tech: ["React", "TypeScript", "Node.js", "Express", "Tracer Bullets", "Full Stack", "Architecture Validation"],
+      image: "/images/tracer-bullets-app.png",
+      liveUrl: "https://tracer-bullets-app.vercel.app/",
+      repoUrl: "https://github.com/KyPython/tracer-bullets-app",
+      featured: true
+    },
+    {
+      id: "log-filter-dsl",
+      title: "Log Filter DSL",
+      category: ProjectCategory.APP_DEVELOPMENT as const,
+      description: "A domain-specific language (DSL) for filtering log lines, inspired by 'Domain Languages' from The Pragmatic Programmer. Instead of writing complex filtering logic in a general-purpose language, this DSL lets users express filters in a natural, domain-specific way. Features a classic compiler architecture with lexer, parser, and evaluator. Supports JSON and Key=Value log formats, comparison operations (equals, contains), logical operators (AND, OR, NOT), and grouping with parentheses. Includes CLI tool for command-line usage and programmatic API for integration. Makes log filtering more readable, maintainable, and accessible to non-programmers.",
+      tech: ["TypeScript", "Node.js", "CLI", "DSL", "Compiler", "Lexer", "Parser", "AST", "Domain Languages"],
+      image: "/images/project-placeholder.png",
+      liveUrl: "",
+      repoUrl: "https://github.com/KyPython/log-filter-dsl",
+      featured: true
+    },
   ],
   personalInfo: {
     name: "Ky Jahn Smith",

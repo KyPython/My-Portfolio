@@ -108,6 +108,24 @@ export const milestones: Milestone[] = [
     technologies: ['TypeScript', 'Node.js', 'CLI', 'Jest', 'Code Analysis', 'AST'],
     link: 'https://github.com/KyPython/software-entropy'
   },
+  {
+    id: 'tracer-bullets-app',
+    date: '2025-12-05',
+    title: 'Tracer Bullets App',
+    type: 'project',
+    description: 'Built a tracer bullets implementation demonstrating end-to-end architecture validation from The Pragmatic Programmer.',
+    technologies: ['React', 'TypeScript', 'Node.js', 'Express', 'Tracer Bullets', 'Architecture Validation'],
+    link: 'https://tracer-bullets-app.vercel.app/'
+  },
+  {
+    id: 'log-filter-dsl',
+    date: '2025-12-05',
+    title: 'Log Filter DSL',
+    type: 'project',
+    description: 'Created a domain-specific language for filtering log lines, demonstrating Domain Languages from The Pragmatic Programmer.',
+    technologies: ['TypeScript', 'Node.js', 'CLI', 'DSL', 'Compiler', 'Lexer', 'Parser', 'AST'],
+    link: 'https://github.com/KyPython/log-filter-dsl'
+  },
   
   // Kaggle Certifications & Courses
   {
