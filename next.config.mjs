@@ -2,7 +2,7 @@ import path from "path";
 import fs from "fs";
 
 const nextConfig = {
-  distDir: "dist",
+  // distDir: "dist", // Removed - Vercel requires default .next directory
   productionBrowserSourceMaps: process.env.NODE_ENV === "production",
   reactStrictMode: false,
   typescript: {
