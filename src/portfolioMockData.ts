@@ -211,6 +211,17 @@ export const mockRootProps = {
       repoUrl: "https://github.com/KyPython/stone-soup-board",
       featured: true
     },
+    {
+      id: "good-enough-soup",
+      title: "Good Enough Soup",
+      category: ProjectCategory.FULL_STACK as const,
+      description: "A minimal viable product (MVP) demonstrating the 'build a minimal viable product, then iterate' approach. A simple daily habit tracker and check-in app where users record 1-3 wins per day. Features daily entry creation with date and notes, and a view of recent entries. Built with React and TypeScript frontend, Node.js and Express backend, emphasizing simplicity and iterative development.",
+      tech: ["React", "TypeScript", "Node.js", "Express", "MVP", "Habit Tracker", "Full Stack"],
+      image: "/images/good-enough-soup.png",
+      liveUrl: "https://good-enough-soup.vercel.app/",
+      repoUrl: "https://github.com/KyPython/good-enough-soup",
+      featured: true
+    },
   ],
   personalInfo: {
     name: "Ky Jahn Smith",
