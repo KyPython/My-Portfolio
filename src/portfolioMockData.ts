@@ -52,7 +52,7 @@ export const mockRootProps = {
         category: ProjectCategory.WEB_DEVELOPMENT as const,
     description: `This web application showcases my ability to build efficient and scalable solutions for data scraping and storage. The app scrapes postal codes from every state in the USA, and securely stores them in a Supabase database. It demonstrates my expertise in web scraping, database integration, and deploying production-ready applications.\n\nKey Features:\n- Automated Data Scraping: Efficiently extracts postal codes from targeted sources.\n- Secure Data Storage: Uses Supabase for reliable and scalable database management.\n- Cloud Deployment: Fully deployed on Render.com for seamless accessibility.\n\nWhy This Matters:\n- Build robust backend systems for data collection and storage.\n- Work with modern tools like Playwright, Supabase, and Render.\n- Deliver solutions that are ready for deployment in real-world scenarios.\n\nHow It Works:\n- Python: Core programming language for the scraper.\n- Playwright: For fast and reliable web scraping.\n- Supabase: A scalable backend-as-a-service for data storage.\n- Render: For cloud deployment and hosting.`,
     tech: ["Python", "Playwright", "Supabase", "Render", "Next.js", "TypeScript", "Tailwind CSS"],
-        image: "/images/project-placeholder.png",
+        image: "/images/offline-tasks-pwa.png",
     liveUrl: "https://post-code-scraper.onrender.com",
   repoUrl: "https://github.com/KyPython/Post-Code-Scraper-New",
   featured: true,
@@ -143,6 +143,39 @@ export const mockRootProps = {
       image: "/images/skillsync.png",
       liveUrl: "https://skillsync-snowy-phi.vercel.app/",
       repoUrl: "https://github.com/KyPython/skillsync",
+      featured: true
+    },
+    {
+      id: "offline-tasks-pwa",
+      title: "Offline Tasks PWA",
+      category: ProjectCategory.FULL_STACK as const,
+      description: "A production-ready Progressive Web App (PWA) with offline-first architecture for task management. Features full CRUD operations that work seamlessly offline, automatic background synchronization when connectivity is restored, and native app-like experience with installable PWA capabilities. Built with modern web technologies and deployed across multiple cloud platforms.",
+      tech: ["React", "Vite", "TypeScript", "Node.js", "Express", "Service Workers", "IndexedDB", "PWA", "Vercel", "Render"],
+      image: "/images/offline-tasks-pwa.png",
+      liveUrl: "https://offline-tasks-pwa.vercel.app/",
+      repoUrl: "https://github.com/KyPython/offline-tasks-pwa",
+      featured: true
+    },
+    {
+      id: "offline-media-pwa",
+      title: "Offline Media PWA",
+      category: ProjectCategory.FULL_STACK as const,
+      description: "A Progressive Web App (PWA) for creating and managing media submissions with offline-first architecture. Features photo and video uploads that work seamlessly offline, automatic background synchronization when connectivity is restored, and a sync queue to track pending uploads. Built with modern web technologies for reliable media management even in low-connectivity environments.",
+      tech: ["React", "Vite", "TypeScript", "Node.js", "Express", "Service Workers", "IndexedDB", "PWA", "File API", "Vercel"],
+      image: "/images/offline-media-pwa.png",
+      liveUrl: "https://offline-media-pwa.vercel.app/",
+      repoUrl: "https://github.com/KyPython/offline-media-pwa",
+      featured: true
+    },
+    {
+      id: "accessibleos",
+      title: "AccessibleOS",
+      category: ProjectCategory.FULL_STACK as const,
+      description: "A comprehensive, accessible task management system built for Web, Mobile, and Unity platforms with strong accessibility foundations. Features WCAG 2.1 AA compliance, semantic HTML, ARIA roles, keyboard navigation, screen reader support, and multi-platform synchronization. Includes React web app, React Native mobile app, Unity game, and Node.js backend with PostgreSQL.",
+      tech: ["React", "TypeScript", "React Native", "Node.js", "Express", "PostgreSQL", "Unity", "C#", "WCAG 2.1", "Accessibility"],
+      image: "/images/accessibleos.png",
+      liveUrl: "https://accessible-os-backend.vercel.app/",
+      repoUrl: "https://github.com/KyPython/AccessibleOS",
       featured: true
     },
   ],
