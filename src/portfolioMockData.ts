@@ -233,6 +233,17 @@ export const mockRootProps = {
       repoUrl: "https://github.com/KyPython/communicate-app",
       featured: true
     },
+    {
+      id: "dry-refactor-sample",
+      title: "DRY Refactor Sample",
+      category: ProjectCategory.APP_DEVELOPMENT as const,
+      description: "A code demonstration project showcasing the DRY (Don't Repeat Yourself) principle from The Pragmatic Programmer. Demonstrates refactoring duplicated order processing logic into a single source of truth. Includes before/after code comparisons, comprehensive tests verifying identical behavior, and clear documentation of the refactoring benefits. Built with TypeScript, focusing on maintainability, consistency, and code quality principles.",
+      tech: ["TypeScript", "DRY Principle", "Refactoring", "Code Quality", "Testing"],
+      image: "/images/project-placeholder.png",
+      liveUrl: "",
+      repoUrl: "https://github.com/KyPython/dry-refactor-sample",
+      featured: true
+    },
   ],
   personalInfo: {
     name: "Ky Jahn Smith",
