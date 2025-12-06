@@ -144,6 +144,357 @@ export const milestones: Milestone[] = [
     technologies: ['TypeScript', 'Node.js', 'CLI', 'Text Processing', 'File Utilities'],
     link: 'https://github.com/KyPython/plain-text-tools'
   },
+  {
+    id: 'shell-games',
+    date: '2025-12-05',
+    title: 'Shell Games Toolkit',
+    type: 'project',
+    description: 'Built reusable shell scripts for project scaffolding, environment checks, and deployment automation, demonstrating Shell Games from The Pragmatic Programmer.',
+    technologies: ['Shell', 'Bash', 'POSIX', 'CLI', 'Automation', 'DevOps'],
+    link: 'https://github.com/KyPython/shell-games'
+  },
+  {
+    id: 'power-editing',
+    date: '2025-12-05',
+    title: 'Power Editing Configuration',
+    type: 'project',
+    description: 'Created VS Code and Cursor editor configuration for maximum productivity, implementing Power Editing philosophy from The Pragmatic Programmer.',
+    technologies: ['VS Code', 'Cursor', 'Editor Configuration', 'Productivity', 'Keybindings', 'Snippets'],
+    link: 'https://github.com/KyPython/power-editing'
+  },
+  {
+    id: 'git-workflows-sample',
+    date: '2025-12-05',
+    title: 'Git Workflows Sample',
+    type: 'project',
+    description: 'Created a sample project demonstrating Git workflows and branching strategies, implementing Source Code Control principles from The Pragmatic Programmer.',
+    technologies: ['TypeScript', 'Node.js', 'Git', 'GitHub', 'CI/CD', 'Branching Strategies'],
+    link: 'https://github.com/KyPython/git-workflows-sample'
+  },
+  {
+    id: 'debugging-demo',
+    date: '2025-12-05',
+    title: 'Debugging Demo',
+    type: 'project',
+    description: 'Created a buggy todo manager app for teaching systematic debugging techniques, demonstrating debugging principles from The Pragmatic Programmer.',
+    technologies: ['TypeScript', 'Node.js', 'Jest', 'Debugging', 'Testing', 'Education'],
+    link: 'https://github.com/KyPython/debugging-demo'
+  },
+  {
+    id: 'code-generator-tool',
+    date: '2025-12-05',
+    title: 'Code Generator Tool',
+    type: 'project',
+    description: 'Created a CLI tool for generating boilerplate code from templates, implementing Code Generators principle from The Pragmatic Programmer.',
+    technologies: ['TypeScript', 'Node.js', 'CLI', 'Code Generation', 'Templates', 'Boilerplate'],
+    link: 'https://github.com/KyPython/code-generator-tool'
+  },
+  {
+    id: 'assertive-programming',
+    date: '2025-12-05',
+    title: 'Assertive Programming Demo',
+    type: 'project',
+    description: 'Created a demonstration of Assertive Programming principles, showing how runtime assertions improve reliability and debuggability, from The Pragmatic Programmer.',
+    technologies: ['TypeScript', 'Node.js', 'Jest', 'Assertions', 'Defensive Programming', 'Testing'],
+    link: 'https://github.com/KyPython/assertive-programming'
+  },
+  {
+    id: 'design-by-contract-lib',
+    date: '2025-12-05',
+    title: 'Design by Contract Library',
+    type: 'project',
+    description: 'Created a lightweight TypeScript library for enforcing Design by Contract principles, published as npm package @kypython/design-by-contract, from The Pragmatic Programmer.',
+    technologies: ['TypeScript', 'Node.js', 'npm', 'Design by Contract', 'Defensive Programming', 'Library'],
+    link: 'https://github.com/KyPython/design-by-contract-lib'
+  },
+  {
+    id: 'using-exceptions-demo',
+    date: '2025-12-05',
+    title: 'Using Exceptions Demo',
+    type: 'project',
+    description: 'Built a demonstration API showcasing proper exception handling patterns, implementing Using Exceptions principle from The Pragmatic Programmer.',
+    technologies: ['TypeScript', 'Node.js', 'Express', 'API', 'Exception Handling', 'Error Handling', 'Full Stack'],
+    link: 'https://using-exceptions-demo.vercel.app/'
+  },
+  {
+    id: 'dead-programs-logging',
+    date: '2025-12-05',
+    title: 'Dead Programs Tell No Lies',
+    type: 'project',
+    description: 'Built a demonstration API showcasing fail-fast error handling and structured logging, implementing Dead Programs Tell No Lies principle from The Pragmatic Programmer.',
+    technologies: ['TypeScript', 'Node.js', 'Express', 'API', 'Error Handling', 'Logging', 'Fail Fast', 'Full Stack'],
+    link: 'https://dead-programs-logging.onrender.com'
+  },
+  {
+    id: 'balancing-resources',
+    date: '2025-12-05',
+    title: 'Balancing Resources Demo',
+    type: 'project',
+    description: 'Created a demonstration of safe resource acquisition and release patterns, implementing Balancing Resources principle from The Pragmatic Programmer.',
+    technologies: ['TypeScript', 'Node.js', 'Resource Management', 'Memory Management', 'Connection Pooling'],
+    link: 'https://github.com/KyPython/balancing-resources'
+  },
+  {
+    id: 'decoupling-law-of-demeter',
+    date: '2025-12-05',
+    title: 'Decoupling & Law of Demeter',
+    type: 'project',
+    description: 'Created a demonstration of decoupling principles and the Law of Demeter, implementing decoupling and Law of Demeter principles from The Pragmatic Programmer.',
+    technologies: ['JavaScript', 'HTML', 'CSS', 'Decoupling', 'Law of Demeter', 'Design Patterns'],
+    link: 'https://kypython.github.io/decoupling-law-of-demeter/'
+  },
+  {
+    id: 'metaprogramming-demo',
+    date: '2025-12-05',
+    title: 'Metaprogramming Demo',
+    type: 'project',
+    description: 'Created a Python demonstration of metaprogramming techniques, showcasing runtime code generation and reflection capabilities from The Pragmatic Programmer.',
+    technologies: ['Python', 'Metaprogramming', 'Decorators', 'Metaclasses', 'Runtime Code Generation'],
+    link: 'https://kypython.github.io/metaprogramming-demo/'
+  },
+  {
+    id: 'temporal-coupling-demo',
+    date: '2025-12-05',
+    title: 'Temporal Coupling Demo',
+    type: 'project',
+    description: 'Created a demonstration of event-driven architecture to avoid temporal coupling, implementing decoupling principles from The Pragmatic Programmer.',
+    technologies: ['TypeScript', 'Node.js', 'Event-Driven Architecture', 'Publish-Subscribe', 'Temporal Coupling'],
+    link: 'https://kypython.github.io/temporal-coupling-demo/'
+  },
+  {
+    id: 'mvc-demo-app',
+    date: '2025-12-05',
+    title: 'MVC Demo Application',
+    type: 'project',
+    description: 'Built a Todo application demonstrating MVC architectural pattern and "It\'s Just a View" principle from The Pragmatic Programmer.',
+    technologies: ['JavaScript', 'Node.js', 'Express', 'EJS', 'MVC', 'Architecture', 'Full Stack'],
+    link: 'https://mvc-demo-app.onrender.com'
+  },
+  {
+    id: 'blackboard-pattern-demo',
+    date: '2025-12-05',
+    title: 'Blackboard Pattern Demo',
+    type: 'project',
+    description: 'Created a demonstration of the Blackboard architectural pattern with text enrichment experts, implementing architectural patterns from The Pragmatic Programmer.',
+    technologies: ['TypeScript', 'Node.js', 'Blackboard Pattern', 'Architecture', 'Design Patterns', 'Expert Systems'],
+    link: 'https://blackboard-pattern-demo.vercel.app/'
+  },
+  {
+    id: 'program-by-coincidence',
+    date: '2025-12-05',
+    title: 'Programming by Coincidence Demo',
+    type: 'project',
+    description: 'Created a demonstration showing the difference between programming by coincidence and intentional programming, from The Pragmatic Programmer.',
+    technologies: ['TypeScript', 'Node.js', 'Jest', 'Refactoring', 'Code Quality', 'Intentional Programming'],
+    link: 'https://github.com/KyPython/program-by-coincidence'
+  },
+  {
+    id: 'algorithm-speed-demo',
+    date: '2025-12-05',
+    title: 'Algorithm Speed Demo',
+    type: 'project',
+    description: 'Created a demonstration of algorithm performance differences with comprehensive benchmarking, implementing Algorithm Speed principle from The Pragmatic Programmer.',
+    technologies: ['TypeScript', 'Node.js', 'Algorithms', 'Big-O Notation', 'Performance', 'Benchmarking'],
+    link: 'https://github.com/KyPython/algorithm-speed-demo'
+  },
+  {
+    id: 'refactoring-legacy-module',
+    date: '2025-12-05',
+    title: 'Refactoring Legacy Module',
+    type: 'project',
+    description: 'Created a demonstration of refactoring legacy code, showing systematic improvement techniques from The Pragmatic Programmer.',
+    technologies: ['JavaScript', 'TypeScript', 'Refactoring', 'Legacy Code', 'Code Quality', 'Testing'],
+    link: 'https://kypython.github.io/refactoring-legacy-module/'
+  },
+  {
+    id: 'easy-to-test-code',
+    date: '2025-12-05',
+    title: 'Easy to Test Code',
+    type: 'project',
+    description: 'Created a demonstration of testable code design with dependency injection, implementing Code That\'s Easy to Test principle from The Pragmatic Programmer.',
+    technologies: ['TypeScript', 'Node.js', 'Jest', 'Dependency Injection', 'Testing', 'Testability'],
+    link: 'https://github.com/KyPython/easy-to-test-code'
+  },
+  {
+    id: 'evil-wizards-demo',
+    date: '2025-12-05',
+    title: 'Evil Wizards Demo',
+    type: 'project',
+    description: 'Created a pedagogical demonstration contrasting obfuscated vs clear code, showing the dramatic impact of code quality on readability and maintainability.',
+    technologies: ['TypeScript', 'Node.js', 'Jest', 'Code Quality', 'Readability', 'Maintainability'],
+    link: 'https://kypython.github.io/evil-wizards-demo/'
+  },
+  {
+    id: 'requirements-pit-tool',
+    date: '2025-12-05',
+    title: 'Requirements Pit Tool',
+    type: 'project',
+    description: 'Created a tool for capturing and structuring software requirements systematically, implementing requirements engineering principles from The Pragmatic Programmer.',
+    technologies: ['React', 'TypeScript', 'Vite', 'Requirements Engineering', 'Project Planning'],
+    link: 'https://requirements-pit-tool.vercel.app/'
+  },
+  {
+    id: 'solving-impossible-puzzles',
+    date: '2025-12-05',
+    title: 'Solving Impossible Puzzles',
+    type: 'project',
+    description: 'Created a case study in debugging a subtle race condition in an async task queue, demonstrating Solving Impossible Puzzles principle from The Pragmatic Programmer.',
+    technologies: ['TypeScript', 'Node.js', 'Jest', 'Debugging', 'Race Conditions', 'Async Programming'],
+    link: 'https://kypython.github.io/solving-impossible-puzzles/'
+  },
+  {
+    id: 'readiness-checklist-tool',
+    date: '2025-12-06',
+    title: 'Readiness Checklist Tool',
+    type: 'project',
+    description: 'Created a web-based tool to evaluate project readiness, implementing Not Until You\'re Ready principle from The Pragmatic Programmer.',
+    technologies: ['React', 'TypeScript', 'Vite', 'Project Planning', 'Risk Assessment'],
+    link: 'https://readiness-checklist-tool.vercel.app/'
+  },
+  {
+    id: 'specification-trap-demo',
+    date: '2025-12-06',
+    title: 'Specification Trap Demo',
+    type: 'project',
+    description: 'Created a demonstration comparing over-specification vs. pragmatic lightweight requirements, illustrating The Specification Trap from The Pragmatic Programmer.',
+    technologies: ['React', 'TypeScript', 'Vite', 'Requirements Engineering', 'User Stories', 'Agile'],
+    link: 'https://kypython.github.io/specification-trap-demo/'
+  },
+  {
+    id: 'circles-and-arrows-design',
+    date: '2025-12-06',
+    title: 'Circles and Arrows Design',
+    type: 'project',
+    description: 'Created a system design repository demonstrating Circles and Arrows approach from The Pragmatic Programmer, using simple Mermaid diagrams for architecture documentation.',
+    technologies: ['Mermaid', 'System Design', 'Architecture', 'Documentation', 'Diagrams'],
+    link: 'https://kypython.github.io/circles-and-arrows-design/'
+  },
+  {
+    id: 'pragmatic-teams-workflow',
+    date: '2025-12-06',
+    title: 'Pragmatic Teams Workflow',
+    type: 'project',
+    description: 'Created a demonstration repository showcasing pragmatic team workflows with GitHub, including workflow documentation and collaboration practices.',
+    technologies: ['React', 'TypeScript', 'Vite', 'GitHub', 'Workflow', 'Team Collaboration'],
+    link: 'https://kypython.github.io/pragmatic-teams-workflow/'
+  },
+  {
+    id: 'ubiquitous-automation',
+    date: '2025-12-06',
+    title: 'Ubiquitous Automation',
+    type: 'project',
+    description: 'Created a demo showcasing CI/CD and DevOps automation principles, implementing Ubiquitous Automation from The Pragmatic Programmer.',
+    technologies: ['TypeScript', 'Node.js', 'GitHub Actions', 'CI/CD', 'DevOps', 'Automation'],
+    link: 'https://ubiquitous-automation.vercel.app/'
+  },
+  {
+    id: 'ruthless-testing-demo',
+    date: '2025-12-06',
+    title: 'Ruthless Testing Demo',
+    type: 'project',
+    description: 'Created a demonstration of Ruthless Testing strategy with multi-layer test suite, implementing testing principles from The Pragmatic Programmer.',
+    technologies: ['TypeScript', 'Node.js', 'Express', 'Jest', 'Supertest', 'Testing'],
+    link: 'https://ruthless-testing-demo.vercel.app/'
+  },
+  {
+    id: 'great-expectations-stakeholders',
+    date: '2025-12-06',
+    title: 'Great Expectations Stakeholders',
+    type: 'project',
+    description: 'Created a demo showcasing Great Expectations principle from The Pragmatic Programmer, demonstrating effective stakeholder expectation management in software projects.',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Stakeholder Management', 'Project Management'],
+    link: 'https://kypython.github.io/great-expectations-stakeholders/'
+  },
+  {
+    id: 'its-all-writing-docs',
+    date: '2025-12-06',
+    title: "It's All Writing",
+    type: 'project',
+    description: 'Created a simple counter application demonstrating that software is all writing, implementing the principle from The Pragmatic Programmer that every aspect of software development is fundamentally an act of writing and communication.',
+    technologies: ['React', 'TypeScript', 'Vite', 'Vitest', 'Documentation'],
+    link: 'https://kypython.github.io/its-all-writing-docs/'
+  },
+  {
+    id: 'intro-llm-chatbot',
+    date: '2025-12-06',
+    title: 'LLM Chat API',
+    type: 'project',
+    description: 'Created a minimal LLM chat API built with Node.js, TypeScript, Express, and OpenAI SDK, demonstrating production-ready API design for AI/ML integration.',
+    technologies: ['Node.js', 'TypeScript', 'Express', 'OpenAI SDK', 'REST API', 'AI/ML'],
+    link: 'https://intro-llm-chatbot.vercel.app/'
+  },
+  {
+    id: 'prompt-playground',
+    date: '2025-12-06',
+    title: 'Prompt Engineering Playground',
+    type: 'project',
+    description: 'Created a Node.js API for testing different prompt engineering techniques (zero-shot, one-shot, few-shot, chain-of-thought) with OpenAI models, demonstrating advanced AI/ML prompt engineering skills.',
+    technologies: ['Node.js', 'TypeScript', 'Express', 'OpenAI SDK', 'Prompt Engineering', 'AI/ML'],
+    link: 'https://github.com/KyPython/prompt-playground'
+  },
+  {
+    id: 'advanced-prompting-reasoner',
+    date: '2025-12-06',
+    title: 'Advanced Prompting Reasoner',
+    type: 'project',
+    description: 'Created a multi-step reasoning API using chain-of-thought and self-consistency techniques for solving math and logic problems, demonstrating advanced AI/ML reasoning capabilities.',
+    technologies: ['Node.js', 'TypeScript', 'Express', 'OpenAI SDK', 'Chain-of-Thought', 'Self-Consistency', 'AI/ML'],
+    link: 'https://advanced-prompting-reasoner.vercel.app/'
+  },
+  {
+    id: 'llm-finetuning-demo',
+    date: '2025-12-06',
+    title: 'LLM Fine-tuning Demo',
+    type: 'project',
+    description: 'Created a comprehensive demonstration of fine-tuning large language models for custom tasks and domain-specific applications, showcasing advanced AI/ML engineering skills.',
+    technologies: ['Python', 'LLM', 'Fine-tuning', 'Machine Learning', 'AI/ML', 'Model Training'],
+    link: 'https://kypython.github.io/llm-finetuning-demo/'
+  },
+  {
+    id: 'rag-node-ts',
+    date: '2025-12-06',
+    title: 'RAG Node.js TypeScript Service',
+    type: 'project',
+    description: 'Created a production-ready RAG (Retrieval-Augmented Generation) HTTP service with document ingestion, semantic search, and LLM answer generation, demonstrating enterprise-grade AI/ML engineering.',
+    technologies: ['Node.js', 'TypeScript', 'Express', 'LangChain', 'OpenAI', 'Pinecone', 'RAG', 'Vector Database', 'AI/ML'],
+    link: 'https://github.com/KyPython/rag-node-ts'
+  },
+  {
+    id: 'llm-internals-report',
+    date: '2025-12-06',
+    title: 'LLM Internals Report',
+    type: 'project',
+    description: 'Created a comprehensive research and educational project exploring LLM internals with interactive notebooks and detailed technical report, demonstrating deep understanding of neural network architecture and transformer mechanisms.',
+    technologies: ['Python', 'Jupyter', 'Machine Learning', 'LLM', 'Neural Networks', 'Transformers', 'Attention Mechanisms', 'AI/ML'],
+    link: 'https://github.com/KyPython/llm-internals-report'
+  },
+  {
+    id: 'llm-future-trends',
+    date: '2025-12-06',
+    title: 'LLM Future Trends',
+    type: 'project',
+    description: 'Created a comprehensive research and analysis project exploring future trends and developments in large language models, demonstrating strategic thinking and ability to analyze emerging AI/ML technologies.',
+    technologies: ['Research', 'Analysis', 'LLM', 'AI/ML', 'Future Trends', 'Strategic Analysis', 'Technology Forecasting'],
+    link: 'https://kypython.github.io/llm-future-trends/'
+  },
+  {
+    id: 'tools-assistant',
+    date: '2025-12-06',
+    title: 'Tools & Frameworks Assistant',
+    type: 'project',
+    description: 'Created a modular CLI assistant with LangChain TypeScript that intelligently selects and calls specialized tools, demonstrating advanced AI agent orchestration and tool calling capabilities.',
+    technologies: ['TypeScript', 'LangChain', 'Node.js', 'AI/ML', 'Agent Framework', 'Tool Calling', 'API', 'CLI'],
+    link: 'https://tools-assistant.vercel.app/'
+  },
+  {
+    id: 'ethics-safety-toolkit',
+    date: '2025-12-06',
+    title: 'Ethics & Safety Toolkit',
+    type: 'project',
+    description: 'Created a lightweight Express.js service that wraps LLM generation endpoints with safety checks, screening outputs for toxicity and bias, demonstrating ethical AI implementation and content moderation patterns.',
+    technologies: ['TypeScript', 'Node.js', 'Express', 'AI/ML', 'Safety', 'Ethics', 'Content Moderation', 'API'],
+    link: 'https://ethics-safety-toolkit.vercel.app/'
+  },
   
   // Kaggle Certifications & Courses
   {
