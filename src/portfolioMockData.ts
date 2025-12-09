@@ -739,6 +739,28 @@ export const mockRootProps = {
       repoUrl: "https://github.com/KyPython/ethics-safety-toolkit",
       featured: true
     },
+    {
+      id: "rl-sim-ray",
+      title: "RL Simulation with Ray RLlib",
+      category: ProjectCategory.APP_DEVELOPMENT as const,
+      description: "A minimal reinforcement learning project using Gymnasium's CartPole-v1 environment and Ray RLlib for distributed training and evaluation. Demonstrates how to train a PPO (Proximal Policy Optimization) agent on classic RL environments, save and load trained checkpoints, evaluate trained agents, and monitor training progress. Features configurable training parameters including learning rate, batch size, and number of iterations, checkpoint management for saving and loading trained models, evaluation scripts for testing agent performance, training progress monitoring with episode rewards and lengths, support for scaling to Ray clusters for distributed training, and easy switching between different Gymnasium environments. Demonstrates production-ready reinforcement learning engineering including distributed RL training, checkpoint management, hyperparameter configuration, and evaluation workflows. Shows how to build scalable RL systems using Ray's distributed computing framework. Includes comprehensive documentation with setup instructions, usage examples, configuration options, troubleshooting guides, and references to Ray RLlib and Gymnasium documentation. Built as an educational resource and practical demonstration of reinforcement learning with distributed computing, suitable for learning RL fundamentals and scaling to more complex environments. Supports both single-process and multi-worker training configurations.",
+      tech: ["Python", "Ray", "RLlib", "Gymnasium", "Reinforcement Learning", "PPO", "AI/ML", "Distributed Computing"],
+      image: "/images/project-placeholder.png",
+      liveUrl: "",
+      repoUrl: "https://github.com/KyPython/rl-sim-ray",
+      featured: true
+    },
+    {
+      id: "cv-robotics-sim",
+      title: "Computer Vision Robotics Simulation",
+      category: ProjectCategory.APP_DEVELOPMENT as const,
+      description: "A lightweight computer vision and robotics simulation that demonstrates how to make control decisions based on camera frames. Simulates a camera feed and uses a pretrained CNN (MobileNetV2) to make simple control decisions (move forward, stop, turn) without requiring actual robot hardware. Features binary classification model for object detection using MobileNetV2 architecture, camera feed simulation that processes images or video files, control decision logic that translates model predictions into robot actions, visual display mode with overlaid control decisions and interactive controls, configurable confidence thresholds for decision-making, support for both image directories and video file inputs, GPU acceleration support for faster inference, and extensible architecture for real robot integration. Demonstrates production-ready computer vision engineering including CNN model deployment, real-time inference, control system integration, and simulation-to-reality workflows. Shows how to build vision-based control systems that can be extended to actual robotics hardware. Includes comprehensive documentation with setup instructions, usage examples for images and videos, advanced configuration options, troubleshooting guides, and clear architecture for extending to real robots. Built as an educational resource and practical demonstration of computer vision in robotics, suitable for learning CV fundamentals and preparing for real-world robot deployment. Supports headless operation for automated processing and interactive display mode for development and debugging.",
+      tech: ["Python", "PyTorch", "MobileNetV2", "Computer Vision", "CNN", "Robotics", "Simulation", "AI/ML"],
+      image: "/images/project-placeholder.png",
+      liveUrl: "",
+      repoUrl: "https://github.com/KyPython/cv-robotics-sim",
+      featured: true
+    },
   ],
   personalInfo: {
     name: "Ky Jahn Smith",
