@@ -3,7 +3,8 @@ export enum ProjectCategory {
   WEB_DEVELOPMENT = "Web Development",
   APP_DEVELOPMENT = "App Development", 
   GAME_DEVELOPMENT = "Game Development",
-  FULL_STACK = "Full Stack"
+  FULL_STACK = "Full Stack",
+  AI_ML = "AI/ML"
 }
 
 export enum ButtonVariant {
@@ -60,7 +61,7 @@ export const mockRootProps = {
     {
       id: "algoclinic",
       title: "AlgoClinic",
-      category: ProjectCategory.WEB_DEVELOPMENT as const,
+      category: ProjectCategory.AI_ML as const,
       description: "Algorithm analysis platform with AI-driven insights, benchmarking and edge-case detection for developers and teams.",
       tech: ["React", "Python", "FastAPI", "Monaco Editor"],
       image: "/images/algoclinic.svg",
@@ -71,7 +72,7 @@ export const mockRootProps = {
     {
       id: "smartscan-ai",
       title: "SmartScan AI Frontend",
-      category: ProjectCategory.APP_DEVELOPMENT as const,
+      category: ProjectCategory.AI_ML as const,
       description: "Cross-platform client for AI-powered image captioning — real-time camera, async API and clean UX; deployed as an MVP.",
       tech: ["Expo Router", "React Native Web", "TypeScript"],
       image: "/images/smartscan-ai-frontend.svg",
@@ -643,7 +644,7 @@ export const mockRootProps = {
     {
       id: "intro-llm-chatbot",
       title: "LLM Chat API",
-      category: ProjectCategory.APP_DEVELOPMENT as const,
+      category: ProjectCategory.AI_ML as const,
       description: "A minimal LLM chat API built with Node.js, TypeScript, Express, and the official OpenAI SDK. Features a clean, production-ready API for integrating large language models into applications. Includes POST /chat endpoint for sending chat messages and receiving assistant replies with conversation history support, GET /health endpoint for health checks, comprehensive error handling with appropriate HTTP status codes, token usage tracking (prompt tokens, completion tokens, total tokens), support for system messages, user messages, and assistant messages in conversation history, CORS enabled for cross-origin requests, and environment variable configuration for API keys. Demonstrates modern API design patterns, TypeScript type safety, Express.js routing, OpenAI SDK integration, and proper error handling. Built as a foundation for building more complex AI-powered applications. Includes clear documentation, example curl requests, and deployment configuration for Vercel. Shows how to build a production-ready API that can be extended with authentication, rate limiting, and persistent storage. Live API deployed on Vercel with interactive documentation.",
       tech: ["Node.js", "TypeScript", "Express", "OpenAI SDK", "REST API", "AI/ML", "LLM"],
       image: "/images/project-placeholder.png",
@@ -654,7 +655,7 @@ export const mockRootProps = {
     {
       id: "prompt-playground",
       title: "Prompt Engineering Playground",
-      category: ProjectCategory.APP_DEVELOPMENT as const,
+      category: ProjectCategory.AI_ML as const,
       description: "A Node.js API for testing different prompt engineering techniques with OpenAI models. Features multiple prompt modes: zero-shot (model performs task with only instructions), one-shot (single example before processing), few-shot (2-3 examples for richer context), and chain-of-thought (step-by-step reasoning process). Includes task-aware example generation that automatically creates relevant examples based on task type (sentiment analysis, trivia/questions, summarization, translation, or generic), OpenAI integration using chat completion API (defaults to gpt-4o-mini), request logging with unique request IDs for tracking, usage tracking with token information (prompt tokens, completion tokens, total tokens), comprehensive error handling with validation and API error management, and deployment configurations for Vercel, Railway, and Render. Demonstrates advanced prompt engineering techniques, API design patterns, TypeScript type safety, and production-ready error handling. Shows how different prompting strategies affect model performance and output quality. Includes detailed documentation with example curl commands for each prompt mode, health check endpoint, and structured logging. Built as a playground for experimenting with and comparing different prompt engineering approaches.",
       tech: ["Node.js", "TypeScript", "Express", "OpenAI SDK", "Prompt Engineering", "AI/ML", "REST API"],
       image: "/images/project-placeholder.png",
@@ -665,7 +666,7 @@ export const mockRootProps = {
     {
       id: "advanced-prompting-reasoner",
       title: "Advanced Prompting Reasoner",
-      category: ProjectCategory.APP_DEVELOPMENT as const,
+      category: ProjectCategory.AI_ML as const,
       description: "A multi-step reasoning API that uses chain-of-thought (CoT) and self-consistency techniques for solving math and logic problems. Features three reasoning strategies: Naive (direct single-call approach without explicit reasoning, fastest but may lack detailed reasoning), Chain-of-Thought (step-by-step reasoning before providing final answer, provides reasoning trace and often improves accuracy), and Self-Consistency (runs multiple CoT samples in parallel with higher temperature for diversity, extracts final answers from each sample and uses majority voting to determine consensus answer, best accuracy but slower due to multiple API calls). Includes POST /solve endpoint for solving math and logic problems with specified strategy, GET /health endpoint for health checks, comprehensive error handling with validation and API error management, structured logging with timestamp, strategy, and question tracking, and deployment configurations for Vercel, Railway, and Render. Demonstrates advanced reasoning techniques, parallel API call orchestration, consensus algorithms, and production-ready API design. Shows how different reasoning strategies affect accuracy and performance for complex problem-solving tasks. Includes detailed documentation with example curl commands for each strategy, JavaScript/TypeScript usage examples, and deployment guides. Built as a demonstration of advanced prompting techniques for improving LLM reasoning capabilities.",
       tech: ["Node.js", "TypeScript", "Express", "OpenAI SDK", "Chain-of-Thought", "Self-Consistency", "AI/ML", "Reasoning"],
       image: "/images/project-placeholder.png",
@@ -676,7 +677,7 @@ export const mockRootProps = {
     {
       id: "llm-finetuning-demo",
       title: "LLM Fine-tuning Demo",
-      category: ProjectCategory.APP_DEVELOPMENT as const,
+      category: ProjectCategory.AI_ML as const,
       description: "A comprehensive demonstration of fine-tuning large language models (LLMs) for custom tasks and domain-specific applications. Features fine-tuning workflow demonstration showing the complete process from data preparation to model deployment, training data preparation and formatting for LLM fine-tuning, model training configuration and hyperparameter tuning, fine-tuned model evaluation and comparison with base models, deployment strategies for fine-tuned models, and best practices for fine-tuning LLMs. Demonstrates advanced AI/ML engineering skills including data preprocessing, model training, evaluation metrics, and production deployment. Shows how fine-tuning can improve model performance on specific tasks, domains, or use cases compared to base models. Includes detailed documentation with step-by-step guides, code examples, and deployment instructions. Built as an educational resource and demonstration of fine-tuning capabilities for custom AI applications.",
       tech: ["Python", "LLM", "Fine-tuning", "Machine Learning", "AI/ML", "Model Training", "OpenAI", "Hugging Face"],
       image: "/images/project-placeholder.png",
@@ -687,7 +688,7 @@ export const mockRootProps = {
     {
       id: "rag-node-ts",
       title: "RAG Node.js TypeScript Service",
-      category: ProjectCategory.APP_DEVELOPMENT as const,
+      category: ProjectCategory.AI_ML as const,
       description: "A production-ready RAG (Retrieval-Augmented Generation) HTTP service built with Node.js, Express, TypeScript, LangChain, OpenAI, and Pinecone. Features document ingestion pipeline for parsing PDF and Markdown files, chunking text, and storing embeddings in Pinecone vector database, semantic search using vector similarity search to retrieve relevant passages, LLM answer generation using OpenAI with citation support to track which passages were used, structured JSON-formatted logging for observability, dual query modes supporting retrieval-only or full RAG answer generation, and comprehensive API endpoints for health checks and querying. Demonstrates production-ready AI/ML engineering including vector database integration, document processing pipelines, semantic search implementation, citation tracking, and structured logging. Shows how RAG systems can provide accurate, context-aware answers by combining retrieval with generation. Includes detailed documentation with API examples, deployment guides for Vercel, Railway, Render, and Docker, testing documentation, and environment configuration. Built as a production-ready service demonstrating enterprise-grade RAG implementation.",
       tech: ["Node.js", "TypeScript", "Express", "LangChain", "OpenAI", "Pinecone", "RAG", "Vector Database", "AI/ML"],
       image: "/images/project-placeholder.png",
@@ -698,7 +699,7 @@ export const mockRootProps = {
     {
       id: "llm-internals-report",
       title: "LLM Internals Report",
-      category: ProjectCategory.APP_DEVELOPMENT as const,
+      category: ProjectCategory.AI_ML as const,
       description: "A comprehensive research and educational project exploring the internal mechanisms of large language models (LLMs). Features interactive Jupyter notebooks demonstrating core LLM concepts including toy attention mechanisms, detailed technical report documenting LLM internals, hands-on implementations of key algorithms and architectures, educational content explaining transformer architecture, attention mechanisms, and neural network fundamentals, and research-quality documentation with code examples and visualizations. Demonstrates deep understanding of LLM architecture, neural network internals, and machine learning fundamentals. Shows how LLMs work at a fundamental level through practical implementations and detailed explanations. Includes Jupyter notebooks for interactive learning, comprehensive documentation, and code examples that make complex concepts accessible. Built as an educational resource and research project for understanding LLM internals from the ground up.",
       tech: ["Python", "Jupyter", "Machine Learning", "LLM", "Neural Networks", "Transformers", "Attention Mechanisms", "AI/ML", "Research"],
       image: "/images/project-placeholder.png",
@@ -709,7 +710,7 @@ export const mockRootProps = {
     {
       id: "llm-future-trends",
       title: "LLM Future Trends",
-      category: ProjectCategory.APP_DEVELOPMENT as const,
+      category: ProjectCategory.AI_ML as const,
       description: "A comprehensive research and analysis project exploring future trends and developments in large language models (LLMs). Features in-depth analysis of emerging LLM technologies, trends, and predictions, forward-looking insights into the evolution of AI and language models, research on next-generation architectures and capabilities, analysis of industry trends and market directions, and strategic perspectives on the future of LLM technology. Demonstrates deep understanding of AI/ML landscape, ability to analyze and predict technological trends, and strategic thinking about the future of AI. Shows how to research and synthesize information about emerging technologies, identify key trends and patterns, and communicate insights effectively. Includes comprehensive documentation, visualizations, and analysis of future LLM developments. Built as an educational resource and strategic analysis project for understanding where LLM technology is heading. Live interactive site on GitHub Pages showcasing future trends analysis.",
       tech: ["Research", "Analysis", "LLM", "AI/ML", "Future Trends", "Strategic Analysis", "Technology Forecasting"],
       image: "/images/project-placeholder.png",
@@ -720,7 +721,7 @@ export const mockRootProps = {
     {
       id: "tools-assistant",
       title: "Tools & Frameworks Assistant",
-      category: ProjectCategory.APP_DEVELOPMENT as const,
+      category: ProjectCategory.AI_ML as const,
       description: "A modular CLI assistant built with LangChain TypeScript that answers questions by intelligently calling specialized tools. Features modular tool architecture where each tool is independently developed, tested, and maintained, intelligent tool selection using LangChain's agent framework to automatically select the right tool(s) for each query, three specialized tools including Calculator (safe math evaluator for arithmetic operations), Web Search Stub (demonstration stub that returns canned search results), and Document Retriever (searches an in-memory knowledge base using keyword matching). Demonstrates production-ready AI/ML engineering including LangChain agent orchestration, modular architecture design, intelligent tool routing, and API design patterns. Shows how to build extensible AI systems that can dynamically select and invoke appropriate tools based on user queries. Includes comprehensive documentation, API endpoints for programmatic access (GET and POST), deployment configurations for Vercel, and TypeScript type safety throughout. Built as both a CLI application and web API, demonstrating how to create AI assistants that can intelligently route queries to specialized tools. Live interactive web interface on Vercel with API endpoints for programmatic access.",
       tech: ["TypeScript", "LangChain", "Node.js", "AI/ML", "Agent Framework", "Tool Calling", "API", "CLI"],
       image: "/images/tools-assistant.png",
@@ -731,7 +732,7 @@ export const mockRootProps = {
     {
       id: "ethics-safety-toolkit",
       title: "Ethics & Safety Toolkit",
-      category: ProjectCategory.APP_DEVELOPMENT as const,
+      category: ProjectCategory.AI_ML as const,
       description: "A lightweight Express.js service that wraps LLM generation endpoints with safety checks, screening outputs for toxicity and bias, and providing a review interface for flagged content. Features safety screening middleware with keyword-based toxicity and bias detection, non-blocking design that flags issues without blocking responses, review system with export endpoint for reviewing flagged outputs, educational codebase with clear comments explaining limitations and production alternatives, POST /generate endpoint for generating content with safety checks, GET /review/export endpoint for exporting flagged items for review, and GET /health endpoint for health checks. Demonstrates production-ready AI/ML engineering including safety-first design, ethical AI implementation, content moderation patterns, and review workflow systems. Shows how to build responsible AI systems that screen for toxicity and bias while maintaining usability. Includes comprehensive documentation with notes on production-grade alternatives (Perspective API, OpenAI moderation, ML-based bias detection), deployment configurations for Vercel, Railway, and Render, and TypeScript type safety throughout. Built as an educational resource and demonstration of ethical AI practices, with clear guidance on upgrading to production-grade safety solutions. Live API deployed on Vercel with interactive endpoints.",
       tech: ["TypeScript", "Node.js", "Express", "AI/ML", "Safety", "Ethics", "Content Moderation", "API"],
       image: "/images/project-placeholder.png",
@@ -742,7 +743,7 @@ export const mockRootProps = {
     {
       id: "rl-sim-ray",
       title: "RL Simulation with Ray RLlib",
-      category: ProjectCategory.APP_DEVELOPMENT as const,
+      category: ProjectCategory.AI_ML as const,
       description: "A minimal reinforcement learning project using Gymnasium's CartPole-v1 environment and Ray RLlib for distributed training and evaluation. Demonstrates how to train a PPO (Proximal Policy Optimization) agent on classic RL environments, save and load trained checkpoints, evaluate trained agents, and monitor training progress. Features configurable training parameters including learning rate, batch size, and number of iterations, checkpoint management for saving and loading trained models, evaluation scripts for testing agent performance, training progress monitoring with episode rewards and lengths, support for scaling to Ray clusters for distributed training, and easy switching between different Gymnasium environments. Demonstrates production-ready reinforcement learning engineering including distributed RL training, checkpoint management, hyperparameter configuration, and evaluation workflows. Shows how to build scalable RL systems using Ray's distributed computing framework. Includes comprehensive documentation with setup instructions, usage examples, configuration options, troubleshooting guides, and references to Ray RLlib and Gymnasium documentation. Built as an educational resource and practical demonstration of reinforcement learning with distributed computing, suitable for learning RL fundamentals and scaling to more complex environments. Supports both single-process and multi-worker training configurations.",
       tech: ["Python", "Ray", "RLlib", "Gymnasium", "Reinforcement Learning", "PPO", "AI/ML", "Distributed Computing"],
       image: "/images/project-placeholder.png",
@@ -753,7 +754,7 @@ export const mockRootProps = {
     {
       id: "cv-robotics-sim",
       title: "Computer Vision Robotics Simulation",
-      category: ProjectCategory.APP_DEVELOPMENT as const,
+      category: ProjectCategory.AI_ML as const,
       description: "A lightweight computer vision and robotics simulation that demonstrates how to make control decisions based on camera frames. Simulates a camera feed and uses a pretrained CNN (MobileNetV2) to make simple control decisions (move forward, stop, turn) without requiring actual robot hardware. Features binary classification model for object detection using MobileNetV2 architecture, camera feed simulation that processes images or video files, control decision logic that translates model predictions into robot actions, visual display mode with overlaid control decisions and interactive controls, configurable confidence thresholds for decision-making, support for both image directories and video file inputs, GPU acceleration support for faster inference, and extensible architecture for real robot integration. Demonstrates production-ready computer vision engineering including CNN model deployment, real-time inference, control system integration, and simulation-to-reality workflows. Shows how to build vision-based control systems that can be extended to actual robotics hardware. Includes comprehensive documentation with setup instructions, usage examples for images and videos, advanced configuration options, troubleshooting guides, and clear architecture for extending to real robots. Built as an educational resource and practical demonstration of computer vision in robotics, suitable for learning CV fundamentals and preparing for real-world robot deployment. Supports headless operation for automated processing and interactive display mode for development and debugging.",
       tech: ["Python", "PyTorch", "MobileNetV2", "Computer Vision", "CNN", "Robotics", "Simulation", "AI/ML"],
       image: "/images/project-placeholder.png",
