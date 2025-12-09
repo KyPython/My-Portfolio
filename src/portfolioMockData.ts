@@ -762,6 +762,28 @@ export const mockRootProps = {
       repoUrl: "https://github.com/KyPython/cv-robotics-sim",
       featured: true
     },
+    {
+      id: "gen-finetune",
+      title: "Generative Text Model Fine-Tuning",
+      category: ProjectCategory.AI_ML as const,
+      description: "A minimal project for fine-tuning a small causal language model (GPT-2) on custom datasets and running inference through an interactive web interface. Features fine-tuning workflow for GPT-2 models with configurable training parameters, interactive Streamlit web app for text generation with adjustable parameters (max length, temperature, top-p sampling), automatic model training on first use if model artifacts are not found, support for custom datasets including Hugging Face datasets, JSON files, or custom text data, inference script for command-line text generation, GPU acceleration support for faster training, and deployment-ready configuration for Streamlit Cloud. Demonstrates production-ready AI/ML engineering including model fine-tuning workflows, text generation inference, web application deployment, and model artifact management. Shows how to fine-tune language models for domain-specific text generation tasks. Includes comprehensive documentation with setup instructions, customization guides for datasets and models, deployment guides for Streamlit Cloud and other platforms, and clear project structure. Built as an educational resource and practical demonstration of LLM fine-tuning, suitable for learning fine-tuning fundamentals and deploying custom text generation models. Supports both CPU and GPU training, with optimized defaults for quick CPU execution.",
+      tech: ["Python", "Transformers", "GPT-2", "PyTorch", "Streamlit", "Hugging Face", "Fine-tuning", "LLM", "AI/ML"],
+      image: "/images/gen-finetune.png",
+      liveUrl: "https://gen-finetune-bkmoe3mg9n3cznsvae6oqj.streamlit.app/",
+      repoUrl: "https://github.com/KyPython/gen-finetune",
+      featured: true
+    },
+    {
+      id: "ray-gpu-train-serve",
+      title: "Ray GPU Train & Serve",
+      category: ProjectCategory.AI_ML as const,
+      description: "A minimal but complete Ray project demonstrating PyTorch model training with Ray Train and serving with Ray Serve. Features distributed training using Ray Train for scalable model training across multiple workers, model serving with Ray Serve providing HTTP endpoints for predictions, simple MLP model definition with toy dataset for demonstration, GPU acceleration support for faster training and inference, Ray Dashboard integration for monitoring cluster resources and job status, model checkpoint management with save/load utilities, device detection for automatic CPU/GPU selection, and production deployment configurations for Railway, Render, Docker, and cloud platforms. Demonstrates production-ready distributed ML engineering including distributed training workflows, model serving infrastructure, GPU resource management, and deployment automation. Shows how to build scalable ML systems using Ray's distributed computing framework for both training and serving. Includes comprehensive documentation with setup instructions, usage examples, deployment guides for multiple platforms, troubleshooting guides, and production considerations. Built as an educational resource and practical demonstration of distributed ML workflows, suitable for learning Ray fundamentals and deploying production ML systems. Supports both single-node and multi-node distributed training, with automatic GPU detection and resource allocation.",
+      tech: ["Python", "Ray", "Ray Train", "Ray Serve", "PyTorch", "GPU", "Distributed Computing", "MLOps", "AI/ML"],
+      image: "/images/project-placeholder.png",
+      liveUrl: "",
+      repoUrl: "https://github.com/KyPython/ray-gpu-train-serve",
+      featured: true
+    },
   ],
   personalInfo: {
     name: "Ky Jahn Smith",
